@@ -1,0 +1,204 @@
+.categoryContainer{
+    background-color: rgb(255, 255, 255,0.1);
+    border-radius: 8px;
+    color: white;
+    padding: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    height: 15px;
+    display: flex;
+    align-items: center;
+}
+.categoryContainer:hover{
+    background-color:  rgba(255, 255, 255, 0.149);
+}
+.categoryContainer p{
+    text-align: center;
+    white-space: nowrap;
+    font-size: 14px;
+}
+ .activeCat{
+    background-color: white;
+   
+    padding: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+}
+.activeCat p{
+    text-align: center;
+    white-space: nowrap;
+    font-size: 14px;
+    color: black ;
+}
+.categoriesContainer{
+    display: flex;
+    justify-content: space-evenly;
+    overflow-x: scroll;
+    position: fixed;
+    width: 100%;
+    /* scrollbar-color: white; */
+    /* padding: 0 30px; */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    /* padding-right: 150px; */
+    /* margin-right: 50px;
+    margin-left: 20px; */
+    margin-top: 65px;
+    z-index: 50;
+    background-color: #0f0f0f;
+    padding: 5px 0;
+  
+
+}
+.categoriesContainer::-webkit-scrollbar{
+    display: none;
+}
+.bodyContainer{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    /* height: 100vh; */
+    overflow-y: scroll;
+    margin-top:100px;
+
+}
+
+.snippetContainer{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 20px 0;
+   
+}
+.snippetContainer:hover{
+    z-index: 100;
+}
+
+.snippetTop{
+    position: relative;
+    cursor: pointer;
+  transition-delay: 2s;
+  
+    
+}
+.snippetTop:hover .videoComp{
+margin-left: 50px;
+margin-top: 40px;
+z-index: 2000;
+transform: scale(1.8);
+transition-delay: 3s;
+
+}
+.videoComp{
+    z-index: -1;
+    border-radius: 15px;
+    object-fit: cover;
+}
+.snippetTop:hover .onHover{
+/* display: flex; */
+transition-delay: 3s;
+transform: scale(1);
+
+}
+.onHover{
+    /* display: flex; */
+    align-items: flex-start;
+    display: flex;
+    position: absolute;
+    background-color:#212121;
+    margin-left: -50px;
+    width: 430px;
+    top:230px;
+    padding: 20px 10px;
+    border-radius:0 0 15px 15px;
+    z-index: 300;
+    transform: scale(0);
+ 
+}
+
+.snippetHover .snippetBottomContent p:nth-child(1){
+width: 400px;
+}
+.hoverTop{
+    border-radius: 15px 15px 0 0;
+    margin-bottom: -10px;
+}
+.hoverBottom{
+    background-color: #212121;
+    padding: 10px;
+    border-radius:0 0 15px 15px;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 20px;
+}
+.hoverButtons button>div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 150px; */
+}
+.hoverButtons button>div p{
+    margin-left: 5px;
+}
+.hoverButtons button{
+    border: none;
+    background-color:rgba(255, 255, 255, 0.149);
+    border-radius: 20px;
+    padding: 5px 35px;
+    font-weight: bold;
+    margin-right: 5px;
+
+}
+.hoverButtons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px 0;
+    margin-top: 10px;
+}
+.snippetThumbnail{
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+
+ .ownerPic{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.snippetBottom{
+    display: flex;
+    margin: 5px 0;
+    align-items: flex-start;
+}
+.snippetBottomContent{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+
+}
+.snippetBottomContent p:nth-child(1){
+    width: 250px;
+    margin-left: 15px;
+    white-space: wrap;
+}
+
+ .snippetOwnerContainer p{
+   display: flex;
+   align-items: center;
+}
+
+.snippetViewsContainer{
+    display: flex;
+}
+.snippetTitle{
+    font-weight: bold;
+}

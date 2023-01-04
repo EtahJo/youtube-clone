@@ -1,0 +1,207 @@
+.navbarContainer{
+  color: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+z-index: 200;
+background-color:#0f0f0f;
+}
+.logo{
+    width: 100px;
+    object-fit: contain;
+    margin-left: 20px;
+    cursor: pointer;
+    
+}
+.leftNavbar,.middleNavbar,.rightNavbar{
+    display: flex;
+    align-items: center;
+}
+.middleNavbar form{
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+.rightNavbar img{
+    width: 40px;
+    border-radius: 50%;
+}
+.notifications{
+    position: relative;
+    margin: 0 20px;
+    cursor: pointer;
+}
+.notifications >.notNumber{
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    background-color:#FF0000 ;
+    border-radius: 50%;
+    padding: 2px 5px;
+    font-size: 10px;
+    
+}
+
+.leftNavbar{
+    margin:0 20px;
+}
+.middleNavbar form input{
+    border: none;
+    background-color: #121212;
+    border-radius: 40px 0px 0px 40px;
+    border: 0.5px solid grey;
+    width: 500px;
+    height: 25px;
+    padding: 10px;
+    font-size: 15px;
+}
+@media screen and (max-width: 1090px) {
+    .middleNavbar form input{
+      width: 50%;
+    }
+  }
+
+form button{
+    border-radius: 0px 40px 40px 0px;
+    background-color: #1e1d1d;
+    border: 0.5px solid grey;
+    /* width: 50px; */
+    height: 46px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+.mic{
+    background-color: #211f1f;
+    padding: 10px;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+.mic:hover,.upload:hover,.not:hover{
+    background-color: #343232;
+}
+.upload,.not{
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+}
+.rightNavbar{
+margin-right: 20px;
+}
+.upload{
+    cursor: pointer;
+}
+
+form button:hover .searchHighlight{
+    display: block;
+}
+.micContainer{
+    position: relative;
+}
+.micContainer:hover .micHighlight{
+    display: block;
+    /* opacity: 1; */
+}
+.micContainer:hover{
+    z-index: 1000;
+}
+.notHighlight,.create,.micHighlight,.searchHighlight{
+    position: absolute;
+    background-color: #575353;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    bottom: -45px;
+    display: none;
+    color: white;
+    /* opacity: 0; */
+}
+.micHighlight{
+    width: 180px;
+}
+.notifications:hover .notHighlight{
+    display: block;
+   
+}
+.createContainer{
+    position: relative;
+}
+
+.createContainer:hover .create{
+    display: block;
+}
+.notificationsContainer{
+    position: absolute;
+    top: 60px;
+    right: 100px;
+    background-color: #343232;
+    padding:  5px 0;
+    border-radius: 10px;
+    width: 450px;
+    height: 600px;
+    overflow-y: scroll;
+}
+.notHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px ;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.notContent{
+    display: flex;
+    flex-direction: column;
+}
+.notContentItem{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px ;
+    cursor: pointer;
+    padding: 5px;
+    /* height:80px; */
+}
+.notContentItem:hover{
+    background-color: #575353;
+    border-radius: 5px;
+}
+.notContentItem img:nth-child(2){
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.notContentItem img{
+    width: 90px;
+    border-radius: 5px;
+   
+}
+.notContentItem p{
+    font-size: 14px;
+    width: 230px;
+}
+.notContentItem strong{
+    font-size: 20px;
+    /* align-self: center; */
+    color: rgb(44, 44, 243);
+}
+.menuIcon{
+    cursor: pointer;
+}
+.notModal{
+    position: absolute;
+   width: 100%;
+   height: 100vh;
+   z-index: -200;
+   /* background-color: red; */
+}
