@@ -51,12 +51,12 @@ const DetailedPage = ({visible}) => {
             <p>{video?.owner}</p>
             {video?.verified && <MdGppGood size={30} color="white"/>}
             </span>
-           <button>Subscribe</button>
-
+            <p>{video?.subscribers[0]+ video.subscribers[1]}</p>
           </div>
+          <button>Subscribe</button>
           </div>
           <div>
-            <button>{video?.views[0]+ video.views[1]}</button>
+            <button>{video?.likes[0]+ video.likes[1]}</button>
             <button>Share</button>
             <button>Download</button>
             <button>Clip</button>
@@ -65,12 +65,26 @@ const DetailedPage = ({visible}) => {
           </div>
         </div>
         <div className='detailDescription'>
-          <p></p>
+          <span>
+          <p>{video?.views[0]+ video.views[1]}</p>
+          <p>{video?.duration}</p>
+          </span>
+          <p>{video?.description}</p>
         </div>
+       
           </div>
       
         </div>
-   
+   <div className='detailLeftBottom'>
+   <div className='tags'>
+          <p>Tags</p>
+          {video?.category.map((tag,index)=>(
+            <p key={index}>
+              {tag}
+            </p>
+          ))}
+        </div>
+   </div>
        </div>
        <div className='detailRight'>
 
