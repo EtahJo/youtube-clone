@@ -1,0 +1,29 @@
+.sideDetail{
+   
+    width: 100%;
+    z-index: 5000;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+}
+.sideClose{
+    background-color: red;
+
+}
+.detailContainer{
+   position: relative;
+    display: flex;
+}
+.detailBody{
+    /* margin-left: 270px; */
+    margin-top: 60px;
+    /* padding: 30px; */
+}
+
+.detailLeftTop{
+    background: rgb(79,78,78);
+background: linear-gradient(90deg, rgba(79,78,78,1) 56%, rgba(96,93,93,0) 100%);
+}
+.detailLeftTopBody{
+    padding: 30px;
+}

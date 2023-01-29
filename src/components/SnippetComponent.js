@@ -13,7 +13,7 @@ const SnippetComponent = ({title,thumbnail,owner,views,duration,video,verified,i
 <div className='snippetTop'>
 <HoverVideoPlayer
       videoSrc={video}
-      style={{ borderRadius:'15px',zIndex:'1'}}
+      style={{ borderRadius:'15px'}}
       className="videoComp"
       playbackStartDelay={3000}
       pausedOverlay={

@@ -18,6 +18,12 @@
     flex: 1.5;
     margin-left: 270px;
 }
+@media screen and (max-width: 1090px) {
+  .homeContent{
+    margin-left: 0px;
+  }
+
+}
 .sxHomeContent{
     flex: 1.5;
     

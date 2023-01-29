@@ -11,22 +11,26 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   const[sidebar,setSidebar]= useState(true);
+  const[visible,setVisible]=useState(false);
   return (
     <div className="App">
       <BrowserRouter>
-      <Navbar sidebar={sidebar} setSidebar={setSidebar}/>
+      <Navbar 
+      sidebar={sidebar} 
+      setSidebar={setSidebar}
+       visible={visible}
+       setVisible={setVisible}
+      />
       <div className='content'>
-        <Sidebar
-        sidebar={sidebar} 
-        setSidebar={setSidebar}
-        className="sidebar"
-        />
-       
        <div className='contentBody'>
        
        <Routes>
-             <Route path='/' element={<HomePage sidebar={sidebar} />}/>
-             <Route path='/detail/:id' element={<DetailedPage/>}/>
+             <Route path='/' element={<HomePage sidebar={sidebar} setSidebar={setSidebar} />}/>
+             <Route path='/detail/:id' 
+             element={
+             <DetailedPage 
+             visible={visible}
+             />}/>
          </Routes>
        
          </div>

@@ -39,13 +39,20 @@ const Notifications=( {setNot})=>{
       
     )
 }
-const Navbar = ({sidebar,setSidebar}) => {
+const Navbar = ({sidebar,setSidebar,setVisible,visible}) => {
     const[not,setNot]=useState(false);
     const navigate = useNavigate()
   return (
     <div className='navbarContainer'>
         <div className='leftNavbar'>
-        <AiOutlineMenu size={30} color="white" onClick={()=>setSidebar(!sidebar)} className="menuIcon"/>
+        <AiOutlineMenu size={30} color="white" 
+        onClick={()=>
+        {
+            setSidebar(!sidebar)
+            setVisible(!visible)
+        }} 
+        className="menuIcon"
+        />
      
        <img  className="logo" 
         src='https://cdn.gtricks.com/2021/04/how-to-enable-youtube-dark-mode-on-pc-and-android-ios-1280x720.jpg' 
