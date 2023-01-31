@@ -35,6 +35,7 @@ flex-direction: column;
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    margin-right:  5px;
 }
 .detailTagBar{
     display: flex;
@@ -44,6 +45,9 @@ flex-direction: column;
     display: flex;
     align-items: center;
     
+}
+.nameSection{
+    margin: 0 5px;
 }
 .subscribe{
     border: none;
@@ -69,6 +73,10 @@ flex-direction: column;
     border: none;
     margin: 0 5px;
 }
+.likeContainer p{
+    padding: 0 10px;
+    border-right: 1px solid rgba(255, 255, 255, 0.549);
+}
 .tagRightSide{
     display: flex;
 }
@@ -79,10 +87,65 @@ flex-direction: column;
 display: flex;
 align-items: center;
 }
+.tagLeftSide  p{
+    font-size: 14px;
+}
+.tagLeftSide p:nth-child(1){
+    font-weight: 800;
+    margin-right: 3px;
+}
+.tagLeftSide p:nth-child(2){
+    color: rgba(255, 255, 255, 0.549);
+}
 .share{
     background-color:rgba(255, 255, 255, 0.149) ;
     border: none;
     border-radius: 30px; 
     padding: 5px 10px;
     margin: 0 5px;
+}
+.detailLeftTopBody h3{
+    margin: 15px 0;
+}
+
+.detailDescription{
+    background-color: rgba(255, 255, 255, 0.149);
+    margin: 20px 0;
+    border-radius: 10px;
+    padding: 10px;
+}
+.detailDescription span{
+    display: flex;
+    align-items: center;
+}
+.detailDescription span p{
+    margin-right: 5px;
+    font-weight: 500;
+    font-size: 16px;
+}
+.detailDescription h5{
+    font-weight: normal;
+    margin-top: 5px;
+}
+.tags{
+    display: grid;
+    grid-template-columns: repeat(20,1fr);
+    margin-left: 30px;
+
+}
+.detailLeftBottom{
+    display: flex;
+flex-direction: column;
+}
+.tags >p{
+    color: rgba(255, 255, 255, 0.749);
+}
+.tagsContent{
+    display: grid;
+    grid-column: span 16;
+    grid-template-columns: repeat(12,1fr);
+    gap: 1px;
+}
+.tagsContent p{
+    color:#3ea6ff;
 }

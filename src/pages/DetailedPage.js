@@ -60,16 +60,16 @@ const DetailedPage = ({visible}) => {
         url={video?.url}
         playing={true}
        width={1280}
-       height={720}
+       height={620}
         />
         <h3>{video?.title}</h3>
         <div className='detailTagBar'>
           <div className='tagLeftSide'>
           <img src={video?.thumbnail} alt='owner profile'/>
-          <div>
+          <div className='nameSection'>
             <span>
             <p>{video?.owner}</p>
-            {video?.verified && <MdGppGood size={30} color="white"/>}
+            {video?.verified && <MdGppGood size={20} color="rgba(255,255,255,0.2)"/>}
             </span>
             <p>{video?.subscribers} subscribers</p>
           </div>
@@ -107,10 +107,10 @@ const DetailedPage = ({visible}) => {
         </div>
         <div className='detailDescription'>
           <span>
-          <p>{video?.views}</p>
+          <p>{video?.views} views</p>
           <p>{video?.duration}</p>
           </span>
-          <p>{video?.description}</p>
+          <h5>{video?.description}</h5>
         </div>
        
           </div>
@@ -119,11 +119,14 @@ const DetailedPage = ({visible}) => {
    <div className='detailLeftBottom'>
    <div className='tags'>
           <p>Tags</p>
+          <div className='tagsContent'>
           {video?.category?.map((tag,index)=>(
             <p key={index}>
-              {tag}
+              {tag} ,
             </p>
           ))}
+          </div>
+        
         </div>
    </div>
        </div>
