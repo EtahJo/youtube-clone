@@ -174,3 +174,26 @@ flex-direction: column;
 .detailSnippetContent{
     margin-left: 10px;
 }
+.detailSnippetLeft{
+    position: relative;
+}
+.detailSnippetLeft span {
+    position: absolute;
+    z-index: 300;
+   
+    flex-direction: column;
+    right: 0px;
+    top: 0px;
+    display: none;
+}
+.spanIcon{
+    background-color: rgba(0, 0, 0, 0.549);
+    margin: 5px;
+    padding: 5px;
+    align-self: center;
+    border-radius: 5px;
+   
+}
+.detailSnippet:hover .detailSnippetLeft span{
+    display: flex;
+}
