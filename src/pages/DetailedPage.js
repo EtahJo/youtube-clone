@@ -9,6 +9,7 @@ import {BsHandThumbsUp,
   BsHandThumbsDown,
   BsHandThumbsDownFill
 } from 'react-icons/bs';
+import {HiMenuAlt3} from 'react-icons/hi';
 import {BiShare} from 'react-icons/bi';
 import {AiOutlineScissor} from 'react-icons/ai';
 import ReactPlayer from 'react-player'
@@ -29,7 +30,7 @@ const DetailedPage = ({visible}) => {
         item.id === id
       ))
     setVideo(data[0])
-    },[]);
+    },[id]);
     const likeClick=()=>{
       setLike({...like,like:!like.like,disLike:false})
     }
@@ -128,14 +129,35 @@ const DetailedPage = ({visible}) => {
           </div>
         
         </div>
+        <div>
+          <p>{video?.comments.length} Comments</p>
+            <HiMenuAlt3 size={20} color="white"/>
+            <p>Sort by</p>
+        </div>
+        <div>
+        <img src='https://lh3.googleusercontent.com/ogw/AOh-ky3XFUqj4N-jxZTxj_HXmL6_rpAzPTtQJnGOUUkUxQ=s64-c-mo' alt='user profile pic'/>
+        <input type='text' placeholder="Add a comment"/>
+        </div>
    </div>
        </div>
        <div className='detailRight'>
 <Categories/>
 <div className='detailVideos'>
 {
-  videoData.map((item,index)=>(
-    <DetailSnippet/>
+  videoData.map((item)=>(
+    
+      item.id != video.id ? ( 
+        <DetailSnippet
+        key={item.id}
+        img={item.thumbnail}
+        title={item.title}
+        owner={item.owner}
+        views={item.views}
+        duration={item.duration}
+        id={item.id}
+        />):('')
+    
+   
   ))
 }
 </div>

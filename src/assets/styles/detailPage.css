@@ -149,3 +149,28 @@ flex-direction: column;
 .tagsContent p{
     color:#3ea6ff;
 }
+.detailSnippet{
+    display: flex;
+    margin: 5px 0;
+    cursor: pointer;
+}
+.detailSnippet img{
+    width: 180px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.detailSnippet span{
+    display: flex;
+    align-items: center;
+}
+.detailSnippetContent  p{
+    color: rgba(255, 255, 255, 0.549);
+    font-size: 12px;
+}
+.detailSnippet h3{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.detailSnippetContent{
+    margin-left: 10px;
+}
