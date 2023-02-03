@@ -15,6 +15,9 @@ import {AiOutlineScissor} from 'react-icons/ai';
 import ReactPlayer from 'react-player'
 import Categories from '../components/Categories';
 import DetailSnippet from '../components/DetailSnippet';
+import Comment from '../components/Comment';
+
+
 const DetailedPage = ({visible}) => {
     const[sidebar,setSidebar]= useState(true);
     const[video,setVideo]=useState({});
@@ -137,6 +140,13 @@ const DetailedPage = ({visible}) => {
         <div>
         <img src='https://lh3.googleusercontent.com/ogw/AOh-ky3XFUqj4N-jxZTxj_HXmL6_rpAzPTtQJnGOUUkUxQ=s64-c-mo' alt='user profile pic'/>
         <input type='text' placeholder="Add a comment"/>
+        </div>
+        <div>
+          {
+            video?.comments.map((item,index)=>(
+              <Comment key={index}/>
+            ))
+          }
         </div>
    </div>
        </div>
