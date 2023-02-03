@@ -15,6 +15,14 @@ const Comment = ({img,name,duration,comment,replies}) => {
     const[reply,setReply]=useState(false);
     const [like,setLike]=useState(false);
     const[dislike,setDislike]=useState(false);
+    const likeClick=()=>{
+        setLike(!like)
+        setDislike(false)
+      }
+      const dislikeClick =()=>{
+        setLike(!dislike)
+        setLike(false)
+      }
   return (
     <div>
         <img src={img} alt="profile"/>
@@ -25,12 +33,17 @@ const Comment = ({img,name,duration,comment,replies}) => {
             </span>
             <p>{comment}</p>
             <span>
-            {!like ? 
-            <BsHandThumbsUp size={20} color='white'/>:
+                <button onClick={likeClick}>
+                {!like ? 
+            <BsHandThumbsUp size={20} color='white' />:
             <BsFillHandThumbsUpFill size={20} color='white'/>}
+                </button>
+            <button onClick={dislikeClick}>
             {!dislike? 
             <BsHandThumbsDown size={20} color="white"/>:
              <BsHandThumbsDownFill size={20} color="white"/>}
+            </button>
+           
              <p>Reply</p>
             </span>
             <span>
@@ -47,7 +60,7 @@ const Comment = ({img,name,duration,comment,replies}) => {
                     <div>
                         {replies.map((item,index)=>(
                             <div key={index}>
-                                
+
                             </div>
                         ))}
                     </div>:''

@@ -144,7 +144,14 @@ const DetailedPage = ({visible}) => {
         <div>
           {
             video?.comments.map((item,index)=>(
-              <Comment key={index}/>
+              <Comment 
+              key={index}
+              img='https://lh3.googleusercontent.com/ogw/AOh-ky3XFUqj4N-jxZTxj_HXmL6_rpAzPTtQJnGOUUkUxQ=s64-c-mo'
+              name={item.name}
+              duration={item.time}
+              comment={item.comment}
+              replies={item.replies}
+              />
             ))
           }
         </div>
