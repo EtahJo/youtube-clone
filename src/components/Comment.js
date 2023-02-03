@@ -23,6 +23,9 @@ const Comment = ({img,name,duration,comment,replies}) => {
         setLike(!dislike)
         setLike(false)
       }
+      const replyClick=()=>{
+        setReply(!reply)
+      }
   return (
     <div>
         <img src={img} alt="profile"/>
@@ -44,7 +47,7 @@ const Comment = ({img,name,duration,comment,replies}) => {
              <BsHandThumbsDownFill size={20} color="white"/>}
             </button>
            
-             <p>Reply</p>
+             <p onClick={replyClick}>Reply</p>
             </span>
             <span>
                 {reply ? 
