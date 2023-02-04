@@ -202,4 +202,12 @@ padding-left: 30px;
 .commentLength{
     display: flex;
     align-items: center;
+    margin: 20px 0;
+}
+.commentLength p:nth-child(1){
+    margin-right: 45px;
+}
+.commentLengthP{
+    padding-left: 20px;
+   
 }

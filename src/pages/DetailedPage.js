@@ -135,7 +135,7 @@ const DetailedPage = ({visible}) => {
         <div className='commentLength'>
           <p>{video?.comments.length} Comments</p>
             <HiMenuAlt3 size={20} color="white"/>
-            <p>Sort by</p>
+            <p className='commentLengthP'>Sort by</p>
         </div>
         <div>
         <img src='https://lh3.googleusercontent.com/ogw/AOh-ky3XFUqj4N-jxZTxj_HXmL6_rpAzPTtQJnGOUUkUxQ=s64-c-mo' alt='user profile pic'/>
