@@ -20,7 +20,7 @@ const Comment = ({img,name,duration,comment,replies,children,likes}) => {
         setDislike(false)
       }
       const dislikeClick =()=>{
-        setLike(!dislike)
+        setDislike(!dislike)
         setLike(false)
       }
       const replyClick=()=>{
@@ -48,15 +48,13 @@ const Comment = ({img,name,duration,comment,replies,children,likes}) => {
              <BsHandThumbsDownFill size={20} color="white"/>}
             </button>
            
-             <p onClick={replyClick}>Reply</p>
+             <p>Reply</p>
             </span>
-            <span>
-                {reply ? 
-                <IoMdArrowDropdown size={20} color='white'/>:
-                 <IoMdArrowDropup size={20} color='white'/>}
-                 <img src={img} alt='profile'/>
-                 <p>&#8226;</p>
-                 <p>{replies?.length}</p>
+            <span onClick={replyClick}>
+                {!reply ? 
+                <IoMdArrowDropdown size={20} color='inherit' className='arrowReplies'/>:
+                 <IoMdArrowDropup size={20} color='inherit' className='arrowReplies'/>}
+                 <p className='replies'>{replies?.length} Replies</p>
             </span>
             <div>
                 {

@@ -236,7 +236,8 @@ padding-left: 30px;
 .commentContainerContent span button{
     background-color: transparent;
     border: none;
-    margin: 0 10px;
+    margin: 0 5px;
+    cursor: pointer;
 }
 .commentContainerContent span:nth-child(1) p:nth-child(2){
  color: rgba(255, 255, 255, 0.549);
@@ -256,4 +257,7 @@ padding-left: 30px;
 }
 .theComment{
     color: 14px;
+}
+.replies,.arrowReplies{
+    color: #3ea6ff;
 }
