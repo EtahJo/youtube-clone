@@ -11,7 +11,7 @@ import {
 } from 'react-icons/io'
 
 
-const Comment = ({img,name,duration,comment,replies,children}) => {
+const Comment = ({img,name,duration,comment,replies,children,likes}) => {
     const[reply,setReply]=useState(false);
     const [like,setLike]=useState(false);
     const[dislike,setDislike]=useState(false);
@@ -41,6 +41,7 @@ const Comment = ({img,name,duration,comment,replies,children}) => {
             <BsHandThumbsUp size={20} color='white' />:
             <BsFillHandThumbsUpFill size={20} color='white'/>}
                 </button>
+                <p>{likes}</p>
             <button onClick={dislikeClick}>
             {!dislike? 
             <BsHandThumbsDown size={20} color="white"/>:

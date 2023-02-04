@@ -235,3 +235,14 @@ padding-left: 30px;
     background-color: transparent;
     border: none;
 }
+.commentContainerContent span:nth-child(1) p:nth-child(2){
+ color: rgba(255, 255, 255, 0.549);
+ font-size: 12px;
+ margin: 0 5px;
+ align-self: center;
+ font-weight: 500;
+}
+.commentContainerContent span:nth-child(1) p:nth-child(1){
+    font-weight: 500;
+    font-size: 14px;
+}

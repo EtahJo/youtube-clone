@@ -151,6 +151,7 @@ const DetailedPage = ({visible}) => {
               duration={item.time}
               comment={item.comment}
               replies={item.replies}
+              likes={item.likes}
               />
             ))
           }
