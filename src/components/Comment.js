@@ -58,7 +58,7 @@ const Comment = ({img,name,duration,comment,replies,children,likes}) => {
             </span>
             <div>
                 {
-                    reply && replies ? 
+                    reply ? 
                     <div>
                        {children}
                     </div>:''
