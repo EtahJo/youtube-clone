@@ -213,10 +213,24 @@ padding-left: 30px;
 }
 .commentContainer{
     display: flex;
+    margin: 10px 0;
 }
 .commentContainer img{
     object-fit: cover;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
+}
+.commentContainerContent{
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+.commentContainerContent span{
+    display: flex;
+    align-items: center;
+}
+.commentContainerContent span button{
+    background-color: transparent;
+    border: none;
 }

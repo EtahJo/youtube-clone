@@ -29,7 +29,7 @@ const Comment = ({img,name,duration,comment,replies,children}) => {
   return (
     <div className='commentContainer'>
         <img src={img} alt="profile"/>
-        <div>
+        <div className='commentContainerContent'>
             <span>
                 <p>{name}</p>
                 <p>{duration}</p>
