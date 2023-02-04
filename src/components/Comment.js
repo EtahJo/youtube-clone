@@ -34,14 +34,14 @@ const Comment = ({img,name,duration,comment,replies,children,likes}) => {
                 <p>{name}</p>
                 <p>{duration}</p>
             </span>
-            <p>{comment}</p>
+            <p className='theComment'>{comment}</p>
             <span>
                 <button onClick={likeClick}>
                 {!like ? 
             <BsHandThumbsUp size={20} color='white' />:
             <BsFillHandThumbsUpFill size={20} color='white'/>}
                 </button>
-                <p>{likes}</p>
+                <p className='likes'>{likes}</p>
             <button onClick={dislikeClick}>
             {!dislike? 
             <BsHandThumbsDown size={20} color="white"/>:
