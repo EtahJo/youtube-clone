@@ -136,6 +136,8 @@ align-items: center;
 .detailLeftBottom{
     display: flex;
 flex-direction: column;
+padding-left: 30px;
+
 }
 .tags >p{
     color: rgba(255, 255, 255, 0.749);
@@ -196,4 +198,8 @@ flex-direction: column;
 }
 .detailSnippet:hover .detailSnippetLeft span{
     display: flex;
+}
+.commentLength{
+    display: flex;
+    align-items: center;
 }

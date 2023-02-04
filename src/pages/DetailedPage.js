@@ -132,7 +132,7 @@ const DetailedPage = ({visible}) => {
           </div>
         
         </div>
-        <div>
+        <div className='commentLength'>
           <p>{video?.comments.length} Comments</p>
             <HiMenuAlt3 size={20} color="white"/>
             <p>Sort by</p>
