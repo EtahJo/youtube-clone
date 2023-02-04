@@ -11,7 +11,7 @@ import {
 } from 'react-icons/io'
 
 
-const Comment = ({img,name,duration,comment,replies}) => {
+const Comment = ({img,name,duration,comment,replies,children}) => {
     const[reply,setReply]=useState(false);
     const [like,setLike]=useState(false);
     const[dislike,setDislike]=useState(false);
@@ -27,7 +27,7 @@ const Comment = ({img,name,duration,comment,replies}) => {
         setReply(!reply)
       }
   return (
-    <div>
+    <div className='commentContainer'>
         <img src={img} alt="profile"/>
         <div>
             <span>
@@ -61,11 +61,7 @@ const Comment = ({img,name,duration,comment,replies}) => {
                 {
                     reply && replies ? 
                     <div>
-                        {replies.map((item,index)=>(
-                            <div key={index}>
-
-                            </div>
-                        ))}
+                       {children}
                     </div>:''
                 }
             </div>
