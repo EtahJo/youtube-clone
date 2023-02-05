@@ -50,7 +50,7 @@ const Comment = ({img,name,duration,comment,replies,children,likes}) => {
            
              <p>Reply</p>
             </span>
-            <span onClick={replyClick}>
+            <span onClick={replyClick} className='allTheReplies'>
                 {!reply ? 
                 <IoMdArrowDropdown size={20} color='inherit' className='arrowReplies'/>:
                  <IoMdArrowDropup size={20} color='inherit' className='arrowReplies'/>}

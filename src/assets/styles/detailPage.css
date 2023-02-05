@@ -261,3 +261,6 @@ padding-left: 30px;
 .replies,.arrowReplies{
     color: #3ea6ff;
 }
+.allTheReplies{
+    cursor: pointer;
+}
