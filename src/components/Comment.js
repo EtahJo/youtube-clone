@@ -52,7 +52,7 @@ const Comment = ({img,name,duration,comment,replies,children,likes}) => {
             </span>
             <span onClick={replyClick} className='allTheReplies'>
                 {!reply ? 
-                <IoMdArrowDropdown size={20} color='inherit' className='arrowReplies'/>:
+                <IoMdArrowDropdown size={20} color='inherit'style={{color:'#3ea6ff'}}/>:
                  <IoMdArrowDropup size={20} color='inherit' className='arrowReplies'/>}
                  <p className='replies'>{replies?.length} Replies</p>
             </span>
@@ -60,7 +60,34 @@ const Comment = ({img,name,duration,comment,replies,children,likes}) => {
                 {
                     reply ? 
                     <div>
-                      {children}
+                      {replies.map((item,index)=>(
+                        <div className=' commentContainer'>
+                             <img src={img} alt="profile"/>
+                         <div className='commentContainerContent'>
+                         <span>
+                         <p>{item.name}</p>
+                         <p>{duration}</p>
+                     </span>
+                     <p className='theComment'>{item.comment}</p>
+                     <span>
+                         <button onClick={likeClick}>
+                         {!like ? 
+                     <BsHandThumbsUp size={20} color='white' />:
+                     <BsFillHandThumbsUpFill size={20} color='white'/>}
+                         </button>
+                         <p className='likes'>{item.likes}</p>
+                     <button onClick={dislikeClick}>
+                     {!dislike? 
+                     <BsHandThumbsDown size={20} color="white"/>:
+                      <BsHandThumbsDownFill size={20} color="white"/>}
+                     </button>
+                    
+                      <p>Reply</p>
+                     </span>
+                     </div>
+                        </div>
+                    
+                      ))}
                     </div>:''
                 }
             </div>

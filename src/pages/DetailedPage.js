@@ -156,19 +156,23 @@ const DetailedPage = ({visible}) => {
               replies={item.replies}
               likes={item.likes}
               >
-                <h2>All replies</h2>
-                {item.replies.map((reply,index)=>{
-                  <h2>{reply.name}</h2>
-                  // <Comment
-                  // key={index}
-                  // img='https://lh3.googleusercontent.com/ogw/AOh-ky3XFUqj4N-jxZTxj_HXmL6_rpAzPTtQJnGOUUkUxQ=s64-c-mo'
-                  // name={reply.name}
-                  // duration={reply.time}
-                  // comment={reply.comment}
-                  // replies={reply?.replies}
-                  // likes={reply.likes}
-                  // />
-                })}
+                {item.replies ?
+                (
+                  item.replies.map((reply,index)=>{
+                    <h2>{reply.name}</h2>
+                    // <Comment
+                    // key={index}
+                    // img='https://lh3.googleusercontent.com/ogw/AOh-ky3XFUqj4N-jxZTxj_HXmL6_rpAzPTtQJnGOUUkUxQ=s64-c-mo'
+                    // name={reply.name}
+                    // duration={reply.time}
+                    // comment={reply.comment}
+                    // replies={reply?.replies}
+                    // likes={reply.likes}
+                    // />
+                  })
+                ):(<h3>No Replies</h3>)
+                }
+           
               </Comment>
             ))
           }
