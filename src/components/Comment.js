@@ -60,7 +60,7 @@ const Comment = ({img,name,duration,comment,replies,children,likes}) => {
                 {
                     reply ? 
                     <div>
-                       {children}
+                      {children}
                     </div>:''
                 }
             </div>
