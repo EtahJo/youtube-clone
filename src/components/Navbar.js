@@ -5,6 +5,7 @@ import {IoMdMic, IoIosNotificationsOutline} from 'react-icons/io';
 import {RiVideoUploadLine} from 'react-icons/ri';
 import VideoData from '../data/videoData';
 import { useNavigate } from 'react-router-dom';
+import UserInfo from './UserInfo';
 
 import '../assets/styles/Navbar.css';
 
@@ -89,7 +90,7 @@ const Navbar = ({sidebar,setSidebar,setVisible,visible}) => {
         <p className='notHighlight'>Notification</p>
         </div>
         <div>
-            <img src='https://lh3.googleusercontent.com/ogw/AOh-ky3XFUqj4N-jxZTxj_HXmL6_rpAzPTtQJnGOUUkUxQ=s64-c-mo' alt='user profile pic'/>
+            <img src='https://lh3.googleusercontent.com/ogw/AOh-ky3XFUqj4N-jxZTxj_HXmL6_rpAzPTtQJnGOUUkUxQ=s64-c-mo' alt='user profile'/>
         </div>
         </div>
        {
