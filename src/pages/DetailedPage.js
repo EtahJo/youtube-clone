@@ -21,21 +21,16 @@ import Comment from '../components/Comment';
 const DetailedPage = ({visible}) => {
     const[sidebar,setSidebar]= useState(true);
     const[video,setVideo]=useState({});
-    const [replies,setReplies]=useState([])
     const [like,setLike]= useState({
       like:false,
       disLike:false
     })
-    // const[]=useState(false)
     const {id}= useParams();
-    console.log(id)
     useEffect(()=>{
       const data = videoData.filter((item)=>(
         item.id === id
       ))
     setVideo(data[0])
-    // setReplies(video.comments.replies)
-    // console.log(video.comments[0]?.replies)
     },[id]);
     const likeClick=()=>{
       setLike({...like,like:!like.like,disLike:false})
@@ -155,25 +150,7 @@ const DetailedPage = ({visible}) => {
               comment={item.comment}
               replies={item.replies}
               likes={item.likes}
-              >
-                {item.replies ?
-                (
-                  item.replies.map((reply,index)=>{
-                    <h2>{reply.name}</h2>
-                    // <Comment
-                    // key={index}
-                    // img='https://lh3.googleusercontent.com/ogw/AOh-ky3XFUqj4N-jxZTxj_HXmL6_rpAzPTtQJnGOUUkUxQ=s64-c-mo'
-                    // name={reply.name}
-                    // duration={reply.time}
-                    // comment={reply.comment}
-                    // replies={reply?.replies}
-                    // likes={reply.likes}
-                    // />
-                  })
-                ):(<h3>No Replies</h3>)
-                }
-           
-              </Comment>
+              />
             ))
           }
         </div>

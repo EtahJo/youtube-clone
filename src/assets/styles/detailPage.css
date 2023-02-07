@@ -29,7 +29,7 @@ flex-direction: column;
     padding: 30px;
 }
 .detailVideos{
-    margin-top: 100px;
+    margin-top: 10px;
 }
 .detailTagBar img{
     width: 40px;
@@ -289,4 +289,7 @@ padding-left: 30px;
     display: flex;
     align-items: center;
     
+}
+.detailRight{
+    width: 400px;
 }

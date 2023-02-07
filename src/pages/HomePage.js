@@ -17,7 +17,7 @@ const HomePage = ({sidebar,setSidebar}) => {
             <div className={sidebar?'homeContent':'sxHomeContent'}>
                 {/* categories */}
                 <div className="allCats">
-                <Categories />
+                <Categories  home="true"/>
                 </div>
               <div>
               <Body className="bodyContent"/>

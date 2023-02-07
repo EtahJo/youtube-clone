@@ -2,7 +2,7 @@ import React,{useState,useContext} from 'react';
 import Category from './Category';
 import VideoData from '../data/videoData';
 import { CatContext } from '../context/catContext';
-const Categories = () => {
+const Categories = ({home}) => {
    const[cat,setCat]=useState("");
    const{catName,setCatName}=useContext(CatContext);
     let categories =[];
@@ -19,7 +19,7 @@ const handleClick=(name)=>{
 }
 
   return (
-    <div className='categoriesContainer'>
+    <div className={home?'categoriesContainer':'sideCategories'}>
         <Category name="All" onClick={()=>handleClick("All")} active={cat}/>
         {CatsArray.map((item,index)=>(
             <Category name={item} key={index} onClick={()=>handleClick(item)} active={cat}/>
