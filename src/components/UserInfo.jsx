@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import userModal from '../data/userModal';
-import {IoIosArrowForward} from 'react-icons/io'
+import {IoIosArrowForward,IoIosArrowRoundBack} from 'react-icons/io'
 
 const UserInfo = () => {
 const[more,setMore]=useState({
@@ -8,11 +8,15 @@ const[more,setMore]=useState({
     appearance:false,
     language:false,
     mode:false,
-    location:false
+    location:false,
+    normal:true
 })
   return (
     <div className='userInfo'>
-        <div className='userHeader'>
+        {
+            more.normal && 
+            <>
+                <div className='userHeader'>
             <img  src='https://lh3.googleusercontent.com/ogw/AOh-ky3XFUqj4N-jxZTxj_HXmL6_rpAzPTtQJnGOUUkUxQ=s64-c-mo' alt='user profile'/>
             <div>
                 <p>Arrah Etah</p>
@@ -33,11 +37,25 @@ const[more,setMore]=useState({
                                 {item.more && <IoIosArrowForward size={25} onClick={()=>setMore({...more,account:true})}/> }
                             </span>
                             }
+
                         
                     </div>
                 ))
             }
         </div>
+            </>
+
+    }
+    {
+        more.account && 
+        <>
+        <div className='userHeader'>
+            <IoIosArrowRoundBack size={25}/>
+            <p>Accounts</p>
+        </div>
+        </>
+    }
+    
     </div>
   )
 }
