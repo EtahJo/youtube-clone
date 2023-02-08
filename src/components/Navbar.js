@@ -11,6 +11,7 @@ import '../assets/styles/Navbar.css';
 
 const Notifications=( {setNot})=>{
     const navigate= useNavigate()
+   
     return (
         <>
          <div className='notModal' onClick={()=>setNot(false)}>
@@ -42,9 +43,16 @@ const Notifications=( {setNot})=>{
 }
 const Navbar = ({sidebar,setSidebar,setVisible,visible}) => {
     const[not,setNot]=useState(false);
+    const[openModal,setOpenModal]=useState(false);
     const navigate = useNavigate()
+    const openModalClicked = ()=>{
+        setOpenModal(!openModal)
+       }
   return (
     <div className='navbarContainer'>
+           {
+        openModal && <UserInfo/>
+      }
         <div className='leftNavbar'>
         <AiOutlineMenu size={30} color="white" 
         onClick={()=>
@@ -89,7 +97,7 @@ const Navbar = ({sidebar,setSidebar,setVisible,visible}) => {
         <p className='notNumber'>9+</p>
         <p className='notHighlight'>Notification</p>
         </div>
-        <div>
+        <div onClick={openModalClicked}>
             <img src='https://lh3.googleusercontent.com/ogw/AOh-ky3XFUqj4N-jxZTxj_HXmL6_rpAzPTtQJnGOUUkUxQ=s64-c-mo' alt='user profile'/>
         </div>
         </div>
