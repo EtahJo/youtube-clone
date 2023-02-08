@@ -54,6 +54,10 @@ const[more,setMore]=useState({
             onClick={()=>setMore({...more,account:false,normal:true})}/>
             <p>Accounts</p>
         </div>
+        <div>
+            <p>Arrah Etah</p>
+            <p>arrahetah23@gmail.com</p>
+        </div>
         </>
     }
     
