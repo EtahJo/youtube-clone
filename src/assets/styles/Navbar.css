@@ -224,3 +224,8 @@ form button:hover .searchHighlight{
     height: 50px;
     margin: 0 5px;
 }
+.theLine{
+   background-color: #575353;
+   width: 100%;
+   height: 1px;
+}

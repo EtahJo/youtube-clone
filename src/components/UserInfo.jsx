@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import userModal from '../data/userModal';
 
 const UserInfo = () => {
   return (
@@ -10,6 +11,23 @@ const UserInfo = () => {
                 <p>@arrah-etah</p>
                 <a href='/#'>Manage your google account</a>
             </div>
+        </div>
+        <div className='userBody'>
+            {
+                userModal.map((item,index)=>(
+                    <div key={index}>
+                        {item.line && <div className='theLine'>
+                            </div>}
+                            {
+                                item.icon && <span className='userItem'>
+                                <item.icon size={25} color="white"/>
+                                <p>{item.name}</p>
+                            </span>
+                            }
+                        
+                    </div>
+                ))
+            }
         </div>
     </div>
   )
