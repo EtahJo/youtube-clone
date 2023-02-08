@@ -235,3 +235,6 @@ form button:hover .searchHighlight{
     align-items: center;
     padding: 10px;
 }
+.userItem p{
+    margin-left: 20px;
+}

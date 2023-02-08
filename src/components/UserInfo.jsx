@@ -1,5 +1,6 @@
 import React from 'react';
 import userModal from '../data/userModal';
+import {IoIosArrowForward} from 'react-icons/io'
 
 const UserInfo = () => {
   return (
@@ -22,6 +23,7 @@ const UserInfo = () => {
                                 item.icon && <span className='userItem'>
                                 <item.icon size={25} color="white"/>
                                 <p>{item.name}</p>
+                                {item.more && <IoIosArrowForward size={25}/> }
                             </span>
                             }
                         
