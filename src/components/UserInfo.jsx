@@ -54,10 +54,19 @@ const[more,setMore]=useState({
             onClick={()=>setMore({...more,account:false,normal:true})}/>
             <p>Accounts</p>
         </div>
-        <div>
+        <div className='preHeader'>
             <p>Arrah Etah</p>
             <p>arrahetah23@gmail.com</p>
         </div>
+        <div className='userHeader'>
+            <img  src='https://lh3.googleusercontent.com/ogw/AOh-ky3XFUqj4N-jxZTxj_HXmL6_rpAzPTtQJnGOUUkUxQ=s64-c-mo' alt='user profile'/>
+            <div>
+                <p>Arrah Etah</p>
+                <p>@arrah-etah</p>
+                <p>21 Subscribers</p>
+            </div>
+        </div>
+        <p>View all channels</p>
         </>
     }
     

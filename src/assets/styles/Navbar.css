@@ -245,3 +245,7 @@ form button:hover .searchHighlight{
     border-bottom: 1px solid #575353;
     display: flex;
 }
+.preHeader{
+    margin: 5px 10px;
+    border-bottom: 1px solid #575353;
+}
