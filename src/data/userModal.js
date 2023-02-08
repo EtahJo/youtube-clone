@@ -5,7 +5,7 @@ import {RiLogoutBoxLine} from 'react-icons/ri'
 
 const userModal = [
     {line:true},
-    
+
 { 
     icon: BsPersonSquare,
     name:'Your Channel'
@@ -32,6 +32,10 @@ const userModal = [
         },
 
     ]
+},
+{ 
+    icon: RiLogoutBoxLine,
+    name:'Sign Out'
 },
 ]
 

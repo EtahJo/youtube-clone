@@ -1,8 +1,15 @@
-import React from 'react';
+import React,{useState} from 'react';
 import userModal from '../data/userModal';
 import {IoIosArrowForward} from 'react-icons/io'
 
 const UserInfo = () => {
+const[more,setMore]=useState({
+    account:false,
+    appearance:false,
+    language:false,
+    mode:false,
+    location:false
+})
   return (
     <div className='userInfo'>
         <div className='userHeader'>
