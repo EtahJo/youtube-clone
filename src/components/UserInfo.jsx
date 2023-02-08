@@ -34,7 +34,7 @@ const[more,setMore]=useState({
                                 item.icon && <span className='userItem'>
                                 <item.icon size={25} color="white"/>
                                 <p>{item.name}</p>
-                                {item.more && <IoIosArrowForward size={25} onClick={()=>setMore({...more,account:true})}/> }
+                                {item.more && <IoIosArrowForward size={25} onClick={()=>setMore({...more,account:true,normal:false})}/> }
                             </span>
                             }
 
@@ -49,8 +49,9 @@ const[more,setMore]=useState({
     {
         more.account && 
         <>
-        <div className='userHeader'>
-            <IoIosArrowRoundBack size={25}/>
+        <div className='accountHeader'>
+            <IoIosArrowRoundBack size={25} 
+            onClick={()=>setMore({...more,account:false,normal:true})}/>
             <p>Accounts</p>
         </div>
         </>

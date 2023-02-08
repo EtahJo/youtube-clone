@@ -241,3 +241,6 @@ form button:hover .searchHighlight{
 .userHeader a{
     color: #3ea6ff;
 }
+.accountHeader{
+    border-bottom: 1px solid #575353;
+}
