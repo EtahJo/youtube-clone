@@ -30,7 +30,7 @@ const[more,setMore]=useState({
                                 item.icon && <span className='userItem'>
                                 <item.icon size={25} color="white"/>
                                 <p>{item.name}</p>
-                                {item.more && <IoIosArrowForward size={25}/> }
+                                {item.more && <IoIosArrowForward size={25} onClick={()=>setMore({...more,account:true})}/> }
                             </span>
                             }
                         
