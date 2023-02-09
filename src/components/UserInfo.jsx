@@ -66,7 +66,8 @@ const[more,setMore]=useState({
                 <p>21 Subscribers</p>
             </div>
         </div>
-        <p>View all channels</p>
+        <p className='viewAll'>View all channels</p>
+        <p>Other Accounts</p>
         </>
     }
     
