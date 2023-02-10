@@ -11,6 +11,7 @@ const[more,setMore]=useState({
     location:false,
     normal:true
 })
+console.log(userModal[3].more[0].account)
   return (
     <div className='userInfo'>
         {
@@ -68,6 +69,44 @@ const[more,setMore]=useState({
         </div>
         <p className='viewAll'>View all channels</p>
         <p>Other Accounts</p>
+        <div>
+            {
+                userModal.map((item)=>(
+                    <div>
+                         <div>
+                            {
+                                item.more ? (
+                                    <div>
+                                            {item?.more.map(itemMore =>(
+                                    <div>
+                                      
+                                           <>
+                                            <p>{itemMore.email}</p>
+                                    <div>
+                                        <img src={itemMore.img} alt='account profile'/>
+                                        <span>
+                                            <p>{itemMore.name}</p>
+                                            <p>{itemMore.subs}</p>
+                                        </span>
+                                    </div>
+                                           </> 
+                                        
+                                   
+                                </div>
+                            
+                              
+                              ))}
+
+                                    </div>
+                                ):''
+                            }
+                          
+                            </div>
+                        
+                    </div>
+                ))
+            }
+        </div>
         </>
     }
     
