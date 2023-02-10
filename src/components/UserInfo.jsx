@@ -78,11 +78,11 @@ console.log(userModal[3].more[0].account)
                                 item.more ? (
                                     <div>
                                             {item?.more.map((itemMore ,index)=>(
-                                    <div key={index}>
+                                    <div key={index} className='accountInfo'>
                                       
                                            <>
                                             <p>{itemMore.email}</p>
-                                    <div>
+                                    <div className='accountInfoBody'>
                                         <img src={itemMore.img} alt='account profile'/>
                                         <span>
                                             <p>{itemMore.name}</p>
