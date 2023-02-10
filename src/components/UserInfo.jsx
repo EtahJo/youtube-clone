@@ -71,14 +71,14 @@ console.log(userModal[3].more[0].account)
         <p>Other Accounts</p>
         <div>
             {
-                userModal.map((item)=>(
-                    <div>
+                userModal.map((item,index)=>(
+                    <div key={index}>
                          <div>
                             {
                                 item.more ? (
                                     <div>
-                                            {item?.more.map(itemMore =>(
-                                    <div>
+                                            {item?.more.map((itemMore ,index)=>(
+                                    <div key={index}>
                                       
                                            <>
                                             <p>{itemMore.email}</p>
