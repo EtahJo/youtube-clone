@@ -1,7 +1,8 @@
 import {BsPersonSquare} from 'react-icons/bs'
 import {SiYoutubestudio} from 'react-icons/si';
 import {MdOutlineSwitchAccount} from 'react-icons/md';
-import {RiLogoutBoxLine} from 'react-icons/ri'
+import {RiLogoutBoxLine} from 'react-icons/ri';
+import {AiOutlineDollar} from 'react-icons/ai';
 
 const userModal = [
     {line:true},
@@ -38,6 +39,94 @@ const userModal = [
 { 
     icon: RiLogoutBoxLine,
     name:'Sign Out'
+},
+{line:true},
+{ 
+    icon: AiOutlineDollar,
+    name:'Purchases and memberships'
+},
+{ 
+    icon: RiLogoutBoxLine,
+    name:'Your data in Youtube'
+},
+{line:true},
+{ 
+    icon: MdOutlineSwitchAccount,
+    name:'Appearance:',
+    more:[
+        {
+            theme:'Dark theme',
+            appearance:true
+        },
+        {
+            theme:'Light theme',
+            appearance:true
+        },
+
+    ]
+},
+{ 
+    icon: MdOutlineSwitchAccount,
+    name:'Language:',
+    more:[
+        {
+            lang:'English',
+            language:true
+        },
+        {
+            lang:'French',
+            language:true
+        },
+
+    ]
+},
+{ 
+    icon: MdOutlineSwitchAccount,
+    name:'Restricted Mode:',
+    more:[
+        {
+            msg:'Activated Restricted Mode',
+            mode:true
+        },
+
+    ]
+},
+{ 
+    icon: MdOutlineSwitchAccount,
+    name:'Location:',
+    more:[
+        {
+            lang:'English',
+            location:true
+        },
+        {
+            lang:'French',
+            location:true
+        },
+
+    ]
+},
+{ 
+    icon: MdOutlineSwitchAccount,
+    name:'Keyboard shortcuts',
+   
+},
+{line:true},
+{ 
+    icon: MdOutlineSwitchAccount,
+    name:'Settings',
+   
+},
+{line:true},
+{ 
+    icon: MdOutlineSwitchAccount,
+    name:'Help',
+   
+},
+{ 
+    icon: MdOutlineSwitchAccount,
+    name:'Send Feedback',
+   
 },
 ]
 
