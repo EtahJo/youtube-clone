@@ -131,10 +131,10 @@ console.log(userModal[3].more[0].account)
                     <div key={index}>
                          <div>
                             {
-                                item.more ? (
+                                item.account ? (
                                     <div>
                                             {item?.more.map((itemMore ,index)=>(
-                                                itemMore.account && (
+                                               
                                                     <div key={index} className='accountInfo'>
                                       
                                                     <>
@@ -150,7 +150,7 @@ console.log(userModal[3].more[0].account)
                                                  
                                             
                                          </div>
-                                                )
+                                                
                               
                               ))}
                                     </div>
