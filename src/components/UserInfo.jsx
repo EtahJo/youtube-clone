@@ -35,7 +35,63 @@ console.log(userModal[3].more[0].account)
                                 item.icon && <span className='userItem'>
                                 <item.icon size={25} color="white"/>
                                 <p>{item.name}</p>
-                                {item.more && <IoIosArrowForward size={25} onClick={()=>setMore({...more,account:true,normal:false})}/> }
+                                {item.account && <IoIosArrowForward size={25} 
+                                onClick={
+                                    ()=>setMore({
+                                        ...more,
+                                        account:true,
+                                        normal:false,
+                                        appearance:false,
+                                        language:false,
+                                        mode:false,
+                                        location:false,
+                                        })}/> }
+                                {item.appearance && <IoIosArrowForward size={25} 
+                                onClick={
+                                    ()=>setMore({
+                                        ...more,
+                                        account:false,
+                                        normal:false,
+                                        appearance:true,
+                                        language:false,
+                                        mode:false,
+                                        location:false,
+                                        })}/> }
+
+                                {item.language && <IoIosArrowForward size={25} 
+                                onClick={
+                                    ()=>setMore({
+                                        ...more,
+                                        account:false,
+                                        normal:false,
+                                        appearance:false,
+                                        language:true,
+                                        mode:false,
+                                        location:false,
+                                        })}/> }
+
+                                {item.mode && <IoIosArrowForward size={25} 
+                                onClick={
+                                    ()=>setMore({
+                                        ...more,
+                                        account:false,
+                                        normal:false,
+                                        appearance:false,
+                                        language:false,
+                                        mode:true,
+                                        location:false,
+                                        })}/> }
+                                {item.location && <IoIosArrowForward size={25} 
+                                onClick={
+                                    ()=>setMore({
+                                        ...more,
+                                        account:false,
+                                        normal:false,
+                                        appearance:false,
+                                        language:false,
+                                        mode:false,
+                                        location:true,
+                                        })}/> }
                             </span>
                             }
 
@@ -95,11 +151,8 @@ console.log(userModal[3].more[0].account)
                                             
                                          </div>
                                                 )
-                                   
-                            
                               
                               ))}
-
                                     </div>
                                 ):''
                             }
@@ -112,7 +165,6 @@ console.log(userModal[3].more[0].account)
         </div>
         </>
     }
-    
     </div>
   )
 }

@@ -18,6 +18,7 @@ const userModal = [
 { 
     icon: MdOutlineSwitchAccount,
     name:'Switch Account',
+    account:true,
     more:[
         {
             email:'arrahetah23@gmail.com',
@@ -53,6 +54,7 @@ const userModal = [
 { 
     icon: MdOutlineSwitchAccount,
     name:'Appearance:',
+    appearance:true,
     more:[
         {
             theme:'Dark theme',
@@ -68,6 +70,7 @@ const userModal = [
 { 
     icon: MdOutlineSwitchAccount,
     name:'Language:',
+    language:true,
     more:[
         {
             lang:'English',
@@ -83,6 +86,7 @@ const userModal = [
 { 
     icon: MdOutlineSwitchAccount,
     name:'Restricted Mode:',
+    mode:true,
     more:[
         {
             msg:'Activated Restricted Mode',
@@ -94,6 +98,7 @@ const userModal = [
 { 
     icon: MdOutlineSwitchAccount,
     name:'Location:',
+    location:true,
     more:[
         {
             lang:'English',
