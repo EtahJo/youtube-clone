@@ -36,6 +36,7 @@ console.log(userModal[3].more[0].account)
                                 <item.icon size={25} color="white"/>
                                 <p>{item.name}</p>
                                 {item.account && <IoIosArrowForward size={25} 
+                                className='itemIcon'
                                 onClick={
                                     ()=>setMore({
                                         ...more,
@@ -45,8 +46,11 @@ console.log(userModal[3].more[0].account)
                                         language:false,
                                         mode:false,
                                         location:false,
-                                        })}/> }
+                                        })
+                                        
+                                        }/> }
                                 {item.appearance && <IoIosArrowForward size={25} 
+                                className='itemIcon'
                                 onClick={
                                     ()=>setMore({
                                         ...more,
@@ -59,6 +63,7 @@ console.log(userModal[3].more[0].account)
                                         })}/> }
 
                                 {item.language && <IoIosArrowForward size={25} 
+                                className='itemIcon'
                                 onClick={
                                     ()=>setMore({
                                         ...more,
@@ -71,6 +76,7 @@ console.log(userModal[3].more[0].account)
                                         })}/> }
 
                                 {item.mode && <IoIosArrowForward size={25} 
+                                className='itemIcon'
                                 onClick={
                                     ()=>setMore({
                                         ...more,
@@ -81,7 +87,8 @@ console.log(userModal[3].more[0].account)
                                         mode:true,
                                         location:false,
                                         })}/> }
-                                {item.location && <IoIosArrowForward size={25} 
+                                {item.location && <IoIosArrowForward size={25}
+                                className='itemIcon' 
                                 onClick={
                                     ()=>setMore({
                                         ...more,

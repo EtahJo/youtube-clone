@@ -265,3 +265,10 @@ form button:hover .searchHighlight{
     width: 40px;
     height: 40px;
 }
+.userItem{
+    position: relative;
+}
+.itemIcon{
+    position: absolute;
+    right: 10px;
+}
