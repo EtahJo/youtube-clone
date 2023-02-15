@@ -1,8 +1,14 @@
-import {BsPersonSquare} from 'react-icons/bs'
+import {BsPersonSquare,BsPersonCircle,BsMoon,BsKeyboardFill} from 'react-icons/bs'
 import {SiYoutubestudio} from 'react-icons/si';
-import {MdOutlineSwitchAccount} from 'react-icons/md';
+import {MdOutlineSwitchAccount, 
+    MdOutlineAddModerator,
+    MdOutlineLanguage,
+    MdOutlineFeedback} from 'react-icons/md';
 import {RiLogoutBoxLine} from 'react-icons/ri';
-import {AiOutlineDollar} from 'react-icons/ai';
+import {AiOutlineDollar,AiOutlineSetting} from 'react-icons/ai';
+import {TbLanguage} from 'react-icons/tb';
+import {BiHelpCircle} from 'react-icons/bi'
+
 
 const userModal = [
     {line:true},
@@ -47,12 +53,12 @@ const userModal = [
     name:'Purchases and memberships'
 },
 { 
-    icon: RiLogoutBoxLine,
+    icon: BsPersonCircle,
     name:'Your data in Youtube'
 },
 {line:true},
 { 
-    icon: MdOutlineSwitchAccount,
+    icon: BsMoon,
     name:'Appearance:',
     appearance:true,
     more:[
@@ -68,7 +74,7 @@ const userModal = [
     ]
 },
 { 
-    icon: MdOutlineSwitchAccount,
+    icon: TbLanguage,
     name:'Language:',
     language:true,
     more:[
@@ -84,7 +90,7 @@ const userModal = [
     ]
 },
 { 
-    icon: MdOutlineSwitchAccount,
+    icon: MdOutlineAddModerator,
     name:'Restricted Mode:',
     mode:true,
     more:[
@@ -96,7 +102,7 @@ const userModal = [
     ]
 },
 { 
-    icon: MdOutlineSwitchAccount,
+    icon: MdOutlineLanguage,
     name:'Location:',
     location:true,
     more:[
@@ -112,24 +118,24 @@ const userModal = [
     ]
 },
 { 
-    icon: MdOutlineSwitchAccount,
+    icon:BsKeyboardFill,
     name:'Keyboard shortcuts',
    
 },
 {line:true},
 { 
-    icon: MdOutlineSwitchAccount,
+    icon: AiOutlineSetting,
     name:'Settings',
    
 },
 {line:true},
 { 
-    icon: MdOutlineSwitchAccount,
+    icon: BiHelpCircle,
     name:'Help',
    
 },
 { 
-    icon: MdOutlineSwitchAccount,
+    icon: MdOutlineFeedback,
     name:'Send Feedback',
    
 },
