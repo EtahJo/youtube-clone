@@ -78,21 +78,24 @@ console.log(userModal[3].more[0].account)
                                 item.more ? (
                                     <div>
                                             {item?.more.map((itemMore ,index)=>(
-                                    <div key={index} className='accountInfo'>
+                                                itemMore.account && (
+                                                    <div key={index} className='accountInfo'>
                                       
-                                           <>
-                                            <p>{itemMore.email}</p>
-                                    <div className='accountInfoBody'>
-                                        <img src={itemMore.img} alt='account profile'/>
-                                        <span>
-                                            <p>{itemMore.name}</p>
-                                            <p>{itemMore.subs}</p>
-                                        </span>
-                                    </div>
-                                           </> 
-                                        
+                                                    <>
+                                                     <p>{itemMore.email}</p>
+                                             <div className='accountInfoBody'>
+                                                 <img src={itemMore.img} alt='account profile'/>
+                                                 <span>
+                                                     <p>{itemMore.name}</p>
+                                                     <p>{itemMore.subs}</p>
+                                                 </span>
+                                             </div>
+                                                    </> 
+                                                 
+                                            
+                                         </div>
+                                                )
                                    
-                                </div>
                             
                               
                               ))}
