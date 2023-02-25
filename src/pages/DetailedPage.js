@@ -22,7 +22,7 @@ import UserInfo from '../components/UserInfo';
 const DetailedPage = ({visible}) => {
     const[sidebar,setSidebar]= useState(true);
     const[video,setVideo]=useState({});
-    const[openModal,setOpenModal]=useState(false);
+  
     const [like,setLike]= useState({
       like:false,
       disLike:false
@@ -40,14 +40,9 @@ const DetailedPage = ({visible}) => {
     const dislikeClick =()=>{
       setLike({...like,like:false,disLike:!like.disLike})
     }
- const openModalClicked = ()=>{
-  setOpenModal(!openModal)
- }
+
   return (
     <div className='detailContainer'>
-      {
-        openModal && <UserInfo/>
-      }
             {visible &&  
             <div className='sideDetail'>
             <Sidebar
