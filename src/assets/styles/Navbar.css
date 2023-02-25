@@ -244,10 +244,24 @@ form button:hover .searchHighlight{
 .accountHeader{
     border-bottom: 1px solid #575353;
     display: flex;
+    padding: 5px 10px;
+    align-items: center;
+}
+.accountHeader p{
+    margin-left: 5px;
 }
 .preHeader{
     margin: 5px 10px;
     border-bottom: 1px solid #575353;
+    padding: 5px 10px;
+}
+.preHeader p:nth-child(1){
+    font-size: 14px;
+}
+.preHeader p:nth-child(2){
+    font-size: 12px;
+    color: #fff;
+    opacity: 0.6;
 }
 .viewAll{
     padding: 15px 5px;
