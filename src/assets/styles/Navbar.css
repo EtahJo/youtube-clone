@@ -214,6 +214,7 @@ form button:hover .searchHighlight{
     z-index: 300;
     background-color: #343232;
     border-radius: 10px;
+    width: 300px;
 }
 .userHeader{
     display: flex;
@@ -234,6 +235,7 @@ form button:hover .searchHighlight{
    width: 100%;
    height: 1px;
 }
+
 .userItem{
     display: flex;
     align-items: center;
@@ -290,4 +292,9 @@ form button:hover .searchHighlight{
 .itemIcon{
     position: absolute;
     right: 10px;
+}
+.moreInfo{
+    color: white;
+    opacity: 0.6;
+    font-size: 12px;
 }

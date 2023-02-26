@@ -127,8 +127,8 @@ console.log(userModal[3].more[0].account)
             <img  src='https://lh3.googleusercontent.com/ogw/AOh-ky3XFUqj4N-jxZTxj_HXmL6_rpAzPTtQJnGOUUkUxQ=s64-c-mo' alt='user profile'/>
             <div>
                 <p>Arrah Etah</p>
-                <p>@arrah-etah</p>
-                <p>21 Subscribers</p>
+                <p className='moreInfo'>@arrah-etah</p>
+                <p className='moreInfo'>21 Subscribers</p>
             </div>
             <AiOutlineCheck size={30}/>
         </div>
