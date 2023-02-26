@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import userModal from '../data/userModal';
-import {IoIosArrowForward,IoIosArrowRoundBack} from 'react-icons/io'
+import {IoIosArrowForward,IoIosArrowRoundBack} from 'react-icons/io';
+import {AiOutlineCheck} from 'react-icons/ai';
 
 const UserInfo = () => {
 const[more,setMore]=useState({
@@ -129,6 +130,7 @@ console.log(userModal[3].more[0].account)
                 <p>@arrah-etah</p>
                 <p>21 Subscribers</p>
             </div>
+            <AiOutlineCheck size={30}/>
         </div>
         <p className='viewAll'>View all channels</p>
         <p>Other Accounts</p>
