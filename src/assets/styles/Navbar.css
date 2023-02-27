@@ -289,6 +289,7 @@ form button:hover .searchHighlight{
     border-radius: 50%;
     width: 40px;
     height: 40px;
+    margin-right: 10px;
 }
 
 .userItem{
@@ -308,6 +309,14 @@ form button:hover .searchHighlight{
     font-size: 13px;
     padding: 15px;
 }
-.accountsList{
+.accountsList p{
+ font-size: 13px;
 
+}
+.accountInfoHeader{
+    margin-bottom: 15px;
+}
+.accountInfoBody span p:nth-child(2){
+    opacity: 0.6;
+    margin: 5px 0;
 }

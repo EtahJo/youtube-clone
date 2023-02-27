@@ -149,7 +149,7 @@ console.log(userModal[3].more[0].account)
                                                     <div key={index} className='accountInfo'>
                                       
                                                     <>
-                                                     <p>{itemMore.email}</p>
+                                                     <p className='accountInfoHeader'>{itemMore.email}</p>
                                              <div className='accountInfoBody'>
                                                  <img src={itemMore.img} alt='account profile'/>
                                                  <span>
