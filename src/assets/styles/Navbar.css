@@ -271,12 +271,16 @@ form button:hover .searchHighlight{
 }
 
 .viewAll{
-    padding: 15px 5px;
+    padding: 15px;
     border-bottom: 6px solid #575353;
+    color: 13px;
+    opacity: 0.8;
 }
 .accountInfo{
     display: flex;
     flex-direction: column;
+    padding: 0 15px 15px 15px;
+   
 }
 .accountInfoBody{
     display: flex;
@@ -286,6 +290,7 @@ form button:hover .searchHighlight{
     width: 40px;
     height: 40px;
 }
+
 .userItem{
     position: relative;
 }
@@ -297,4 +302,12 @@ form button:hover .searchHighlight{
     color: white;
     opacity: 0.6;
     font-size: 12px;
+}
+.otherAcc{
+    font-weight: bold;
+    font-size: 13px;
+    padding: 15px;
+}
+.accountsList{
+
 }

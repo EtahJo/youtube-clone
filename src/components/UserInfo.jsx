@@ -1,7 +1,9 @@
 import React,{useState} from 'react';
 import userModal from '../data/userModal';
-import {IoIosArrowForward,IoIosArrowRoundBack} from 'react-icons/io';
+import {IoIosArrowForward,IoIosArrowRoundBack, IoPersonAddOutline} from 'react-icons/io';
 import {AiOutlineCheck} from 'react-icons/ai';
+import {BiLogOut} from 'react-icons/bi';
+import {BsPersonPlus} from 'react-icons/bs'
 
 const UserInfo = () => {
 const[more,setMore]=useState({
@@ -133,7 +135,7 @@ console.log(userModal[3].more[0].account)
             <AiOutlineCheck size={30}/>
         </div>
         <p className='viewAll'>View all channels</p>
-        <p>Other Accounts</p>
+        <p className='otherAcc'>Other Accounts</p>
         <div>
             {
                 userModal.map((item,index)=>(
@@ -141,7 +143,7 @@ console.log(userModal[3].more[0].account)
                          <div>
                             {
                                 item.account ? (
-                                    <div>
+                                    <div className='accountsList'>
                                             {item?.more.map((itemMore ,index)=>(
                                                
                                                     <div key={index} className='accountInfo'>
@@ -165,12 +167,19 @@ console.log(userModal[3].more[0].account)
                                     </div>
                                 ):''
                             }
-                          
                             </div>
                         
                     </div>
                 ))
             }
+              <span>
+                            <BsPersonPlus size={30} color='#fff'/>
+                            <p>Add Account</p>
+                          </span>
+                          <span>
+                            <BiLogOut size={30} color='#fff'/>
+                            <p>Sign Out</p>
+                          </span>
         </div>
         </>
     }
