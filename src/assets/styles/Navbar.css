@@ -320,3 +320,9 @@ form button:hover .searchHighlight{
     opacity: 0.6;
     margin: 5px 0;
 }
+.addAcc{
+    border-top: 1px solid rgba(255,255,255,0.6);
+    display: flex;
+    align-items: center;
+    
+}

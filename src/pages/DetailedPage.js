@@ -16,7 +16,7 @@ import ReactPlayer from 'react-player'
 import Categories from '../components/Categories';
 import DetailSnippet from '../components/DetailSnippet';
 import Comment from '../components/Comment';
-import UserInfo from '../components/UserInfo';
+
 
 
 const DetailedPage = ({visible}) => {
@@ -165,7 +165,7 @@ const DetailedPage = ({visible}) => {
 {
   videoData.map((item)=>(
     
-      item.id != video.id ? ( 
+      item.id !== video.id ? ( 
         <DetailSnippet
         key={item.id}
         img={item.thumbnail}

@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import userModal from '../data/userModal';
-import {IoIosArrowForward,IoIosArrowRoundBack, IoPersonAddOutline} from 'react-icons/io';
+import {IoIosArrowForward,IoIosArrowRoundBack} from 'react-icons/io';
 import {AiOutlineCheck} from 'react-icons/ai';
 import {BiLogOut} from 'react-icons/bi';
 import {BsPersonPlus} from 'react-icons/bs'
@@ -172,7 +172,7 @@ console.log(userModal[3].more[0].account)
                     </div>
                 ))
             }
-              <span>
+              <span className='addAcc'>
                             <BsPersonPlus size={30} color='#fff'/>
                             <p>Add Account</p>
                           </span>
