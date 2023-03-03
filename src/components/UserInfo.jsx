@@ -176,7 +176,7 @@ console.log(userModal[3].more[0].account)
                             <BsPersonPlus size={30} color='#fff'/>
                             <p>Add Account</p>
                           </span>
-                          <span>
+                          <span className='signOut'>
                             <BiLogOut size={30} color='#fff'/>
                             <p>Sign Out</p>
                           </span>
