@@ -325,18 +325,19 @@ form button:hover .searchHighlight{
     display: flex;
     align-items: center;
     margin: 15px 0;
+    justify-content: flex-start;
 
 }
-.addAcc ,.signOut p {
+.addAcc p,.signOut p {
    
     font-size: 14px;
+    margin-left: 20px;
 }
 .signOut{
     display: flex;
     align-items: center;
     margin: 15px 0;
-  
-   
+margin-left: auto;   
 }
 .accountBottom{
   padding-left: 15px;
