@@ -172,7 +172,8 @@ console.log(userModal[3].more[0].account)
                     </div>
                 ))
             }
-              <span className='addAcc'>
+            <div className='accountBottom'>
+            <span className='addAcc'>
                             <BsPersonPlus size={30} color='#fff'/>
                             <p>Add Account</p>
                           </span>
@@ -180,6 +181,8 @@ console.log(userModal[3].more[0].account)
                             <BiLogOut size={30} color='#fff'/>
                             <p>Sign Out</p>
                           </span>
+            </div>
+          
         </div>
         </>
     }

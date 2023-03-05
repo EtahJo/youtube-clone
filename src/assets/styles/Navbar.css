@@ -324,13 +324,19 @@ form button:hover .searchHighlight{
     border-top: 1px solid rgba(255,255,255,0.6);
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
 }
 .addAcc ,.signOut p {
-    margin-left: 10px;
+   
     font-size: 14px;
 }
 .signOut{
     display: flex;
     align-items: center;
+    justify-content: space-between;
+   
+}
+.accountBottom{
+    width: 200px;
 }
