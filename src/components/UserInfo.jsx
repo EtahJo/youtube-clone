@@ -193,7 +193,12 @@ console.log(userModal[3].more[0].account)
             onClick={()=>setMore({...more,account:false,normal:true})}/>
             <p>Appearances</p>
         </div>
-        
+        <p>Setting applies to this browser only</p>
+        <ul>
+            <li>Use device theme</li>
+            <li>Dark theme</li>
+            <li>Light theme</li>
+        </ul>
         </>
     }
     </div>
