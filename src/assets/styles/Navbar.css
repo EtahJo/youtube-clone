@@ -321,10 +321,10 @@ form button:hover .searchHighlight{
     margin: 5px 0;
 }
 .addAcc{
-    border-top: 1px solid rgba(255,255,255,0.6);
+   
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    margin: 15px 0;
 
 }
 .addAcc ,.signOut p {
@@ -334,9 +334,11 @@ form button:hover .searchHighlight{
 .signOut{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    margin: 15px 0;
+  
    
 }
 .accountBottom{
-    width: 200px;
+  padding-left: 15px;
+  border-top: 1px solid rgba(255,255,255,0.6);
 }
