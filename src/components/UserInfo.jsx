@@ -188,7 +188,11 @@ console.log(userModal[3].more[0].account)
     }
     {
         more.appearance && <>
-        
+         <div className='accountHeader'>
+            <IoIosArrowRoundBack size={30} 
+            onClick={()=>setMore({...more,account:false,normal:true})}/>
+            <p>Appearances</p>
+        </div>
         
         </>
     }
