@@ -4,7 +4,7 @@ import {IoIosArrowForward,IoIosArrowRoundBack} from 'react-icons/io';
 import {AiOutlineCheck} from 'react-icons/ai';
 import {BiLogOut} from 'react-icons/bi';
 import {BsPersonPlus} from 'react-icons/bs';
-import { themeContext } from '../context/appearanceContext';
+import { ThemeContext } from '../context/appearanceContext';
 
 const UserInfo = () => {
 const[more,setMore]=useState({
@@ -15,7 +15,7 @@ const[more,setMore]=useState({
     location:false,
     normal:true
 })
-const {dark,setDark}= useContext(themeContext)
+const {dark,setDark}= useContext(ThemeContext)
 console.log(userModal[3].more[0].account)
   return (
     <div className='userInfo'>
