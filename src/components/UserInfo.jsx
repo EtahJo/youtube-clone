@@ -199,10 +199,15 @@ console.log(userModal[3].more[0].account)
         <ul>
             <li>Use device theme</li>
             <li>
-                {dark && <AiOutlineCheck/>}
+                {dark ? <AiOutlineCheck className='tickIcon'/>:<div className='tickIcon'></div>}
                 <p>Dark theme</p>
             </li>
-            <li>Light theme</li>
+            <li>
+            {!dark ? <AiOutlineCheck className='tickIcon'/>:<div className='tickIcon'></div>}
+                <p>
+                Light theme
+                </p>
+            </li>
         </ul>
         </>
     }

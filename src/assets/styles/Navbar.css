@@ -351,3 +351,14 @@ margin-left: auto;
 .userInfo ul{
     margin: 20px;
 }
+.userInfo ul li{
+display: flex;
+align-items: center;
+
+}
+.userInfo ul li >p{
+    margin-left: 20px;
+}
+.tickIcon{
+    width: 20px;
+}
