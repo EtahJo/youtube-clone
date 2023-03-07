@@ -1,9 +1,10 @@
-import React,{useState} from 'react';
+import React,{useState,useContext} from 'react';
 import userModal from '../data/userModal';
 import {IoIosArrowForward,IoIosArrowRoundBack} from 'react-icons/io';
 import {AiOutlineCheck} from 'react-icons/ai';
 import {BiLogOut} from 'react-icons/bi';
-import {BsPersonPlus} from 'react-icons/bs'
+import {BsPersonPlus} from 'react-icons/bs';
+import { themeContext } from '../context/appearanceContext';
 
 const UserInfo = () => {
 const[more,setMore]=useState({
@@ -14,6 +15,7 @@ const[more,setMore]=useState({
     location:false,
     normal:true
 })
+const {dark,setDark}= useContext(themeContext)
 console.log(userModal[3].more[0].account)
   return (
     <div className='userInfo'>
@@ -193,10 +195,13 @@ console.log(userModal[3].more[0].account)
             onClick={()=>setMore({...more,account:false,normal:true})}/>
             <p>Appearances</p>
         </div>
-        <p>Setting applies to this browser only</p>
+        <p className='appearanceTag'>Setting applies to this browser only</p>
         <ul>
             <li>Use device theme</li>
-            <li>Dark theme</li>
+            <li>
+                {dark && <AiOutlineCheck/>}
+                <p>Dark theme</p>
+            </li>
             <li>Light theme</li>
         </ul>
         </>

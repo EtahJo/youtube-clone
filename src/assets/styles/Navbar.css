@@ -343,3 +343,11 @@ margin-left: auto;
   padding-left: 15px;
   border-top: 1px solid rgba(255,255,255,0.6);
 }
+.appearanceTag{
+    color: rgba(255,255,255,0.6);
+    font-size: 12px;
+    margin-left: 20px;
+}
+.userInfo ul{
+    margin: 20px;
+}
