@@ -1,4 +1,4 @@
-import React,{useState,useContext} from 'react';
+import React,{useState,useContext,useEffect} from 'react';
 import userModal from '../data/userModal';
 import {IoIosArrowForward,IoIosArrowRoundBack} from 'react-icons/io';
 import {AiOutlineCheck} from 'react-icons/ai';
@@ -16,6 +16,9 @@ const[more,setMore]=useState({
     normal:true
 })
 const {dark,setDark}= useContext(ThemeContext)
+// useEffect(()=>{
+//     setDark(!dark)
+// },[dark])
 console.log(userModal[3].more[0].account)
   return (
     <div className='userInfo'>
@@ -54,7 +57,10 @@ console.log(userModal[3].more[0].account)
                                         })
                                         
                                         }/> }
-                                {item.appearance && <IoIosArrowForward size={25} 
+                                {item.appearance &&(
+                                    <>
+                                      {dark ? 'Dark':'Light'}
+                                     <IoIosArrowForward size={25} 
                                 className='itemIcon'
                                 onClick={
                                     ()=>setMore({
@@ -65,8 +71,13 @@ console.log(userModal[3].more[0].account)
                                         language:false,
                                         mode:false,
                                         location:false,
-                                        })}/> }
-
+                                        })}/> 
+                                    </>
+                                )
+                                
+                                        
+                                        }
+                              
                                 {item.language && <IoIosArrowForward size={25} 
                                 className='itemIcon'
                                 onClick={
@@ -104,6 +115,7 @@ console.log(userModal[3].more[0].account)
                                         mode:false,
                                         location:true,
                                         })}/> }
+                            
                             </span>
                             }
 
