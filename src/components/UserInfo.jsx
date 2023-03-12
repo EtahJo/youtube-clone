@@ -42,7 +42,7 @@ console.log(userModal[3].more[0].account)
                             {
                                 item.icon && <span className='userItem'>
                                 <item.icon size={25} color="white"/>
-                                <p>{item.name}</p>
+                                <p style={{marginRight:'5px'}} >{item.name}</p>
                                 {item.account && <IoIosArrowForward size={25} 
                                 className='itemIcon'
                                 onClick={
