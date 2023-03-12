@@ -347,7 +347,9 @@ margin-left: 5px;
 .appearanceTag{
     color: rgba(255,255,255,0.6);
     font-size: 12px;
+    margin: 15px 0;
     margin-left: 20px;
+    
 }
 .userInfo ul{
     margin: 20px;
@@ -355,10 +357,14 @@ margin-left: 5px;
 .userInfo ul li{
 display: flex;
 align-items: center;
-
+margin: 15px 0;
+}
+.userInfo ul li:nth-child(1){
+    margin-left: 40px;
 }
 .userInfo ul li >p{
     margin-left: 20px;
+    cursor: pointer;
 }
 .tickIcon{
     width: 20px;
