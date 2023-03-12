@@ -176,7 +176,7 @@ console.log(userModal[3].more[0].account)
             }
             <div className='accountBottom'>
             <span className='addAcc'>
-                            <BsPersonPlus size={30} color='#fff'/>
+                            <BsPersonPlus size={28} color='#fff'/>
                             <p>Add Account</p>
                           </span>
                           <span className='signOut'>
@@ -199,7 +199,9 @@ console.log(userModal[3].more[0].account)
         <ul>
             <li>Use device theme</li>
             <li>
-                {dark ? <AiOutlineCheck className='tickIcon'/>:<div className='tickIcon'></div>}
+                {dark ? <AiOutlineCheck className='tickIcon'
+                
+                />:<div className='tickIcon'></div>}
                 <p>Dark theme</p>
             </li>
             <li>

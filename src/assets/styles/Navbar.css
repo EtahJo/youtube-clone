@@ -326,6 +326,7 @@ form button:hover .searchHighlight{
     align-items: center;
     margin: 15px 0;
     justify-content: flex-start;
+margin-left: 5px;
 
 }
 .addAcc p,.signOut p {
@@ -337,7 +338,7 @@ form button:hover .searchHighlight{
     display: flex;
     align-items: center;
     margin: 15px 0;
-margin-left: auto;   
+  
 }
 .accountBottom{
   padding-left: 15px;
