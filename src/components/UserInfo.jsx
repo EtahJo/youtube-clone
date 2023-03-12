@@ -5,6 +5,7 @@ import {AiOutlineCheck} from 'react-icons/ai';
 import {BiLogOut} from 'react-icons/bi';
 import {BsPersonPlus} from 'react-icons/bs';
 import { ThemeContext } from '../context/appearanceContext';
+import UserSectionHeader from './UserSectionHeader';
 
 const UserInfo = () => {
 const[more,setMore]=useState({
@@ -130,11 +131,10 @@ console.log(userModal[3].more[0].account)
     {
         more.account && 
         <>
-        <div className='accountHeader'>
-            <IoIosArrowRoundBack size={30} 
-            onClick={()=>setMore({...more,account:false,normal:true})}/>
-            <p>Accounts</p>
-        </div>
+      <UserSectionHeader
+      more={more}
+      title='Accounts'
+      />
         <div className='preHeader'>
             <p>Arrah Etah</p>
             <p>arrahetah23@gmail.com</p>
@@ -202,11 +202,10 @@ console.log(userModal[3].more[0].account)
     }
     {
         more.appearance && <>
-         <div className='accountHeader'>
-            <IoIosArrowRoundBack size={30} 
-            onClick={()=>setMore({...more,account:false,normal:true})}/>
-            <p>Appearances</p>
-        </div>
+         <UserSectionHeader
+      more={more}
+      title='Appearances'
+      />
         <p className='appearanceTag'>Setting applies to this browser only</p>
         <ul>
             <li>Use device theme</li>
@@ -228,31 +227,28 @@ console.log(userModal[3].more[0].account)
     {
         more.language &&
          <>
-          <div className='accountHeader'>
-            <IoIosArrowRoundBack size={30} 
-            onClick={()=>setMore({...more,language:false,normal:true})}/>
-            <p>Choose your language</p>
-        </div>
+          <UserSectionHeader
+      more={more}
+      title='Choose your language'
+      />
         </>
     }
     {
         more.mode &&
          <>
-          <div className='accountHeader'>
-            <IoIosArrowRoundBack size={30} 
-            onClick={()=>setMore({...more,mode:false,normal:true})}/>
-            <p>Restricted Mode</p>
-        </div>
+        <UserSectionHeader
+      more={more}
+      title='Restricted Mode'
+      />
         </>
     }
     {
         more.location &&
          <>
-          <div className='accountHeader'>
-            <IoIosArrowRoundBack size={30} 
-            onClick={()=>setMore({...more,location:false,normal:true})}/>
-            <p>Choose your Location</p>
-        </div>
+         <UserSectionHeader
+      more={more}
+      title='Choose your location'
+      />
         </>
     }
     </div>
