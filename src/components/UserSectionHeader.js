@@ -1,11 +1,11 @@
 import React from 'react';
 import {IoIosArrowRoundBack} from 'react-icons/io'
 
-const UserSectionHeader = ({setMore,title,more}) => {
+const UserSectionHeader = ({setMore,title,more,onClick}) => {
   return (
     <div className='accountHeader'>
     <IoIosArrowRoundBack size={30} 
-    onClick={()=>setMore({...more,account:false,normal:true})}/>
+    onClick={onClick}/>
     <p>{title}</p>
 </div>
   )

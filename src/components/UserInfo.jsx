@@ -134,6 +134,8 @@ console.log(userModal[3].more[0].account)
       <UserSectionHeader
       more={more}
       title='Accounts'
+      setMore={setMore}
+      onClick={()=>setMore({...more,account:false,normal:true})}
       />
         <div className='preHeader'>
             <p>Arrah Etah</p>
@@ -205,6 +207,8 @@ console.log(userModal[3].more[0].account)
          <UserSectionHeader
       more={more}
       title='Appearances'
+      setMore={setMore}
+      onClick={()=>setMore({...more,appearance:false,normal:true})}
       />
         <p className='appearanceTag'>Setting applies to this browser only</p>
         <ul>
@@ -230,6 +234,7 @@ console.log(userModal[3].more[0].account)
           <UserSectionHeader
       more={more}
       title='Choose your language'
+      onClick={()=>setMore({...more,language:false,normal:true})}
       />
         </>
     }
@@ -239,6 +244,7 @@ console.log(userModal[3].more[0].account)
         <UserSectionHeader
       more={more}
       title='Restricted Mode'
+      onClick={()=>setMore({...more,mode:false,normal:true})}
       />
         </>
     }
@@ -248,6 +254,7 @@ console.log(userModal[3].more[0].account)
          <UserSectionHeader
       more={more}
       title='Choose your location'
+      onClick={()=>setMore({...more,location:false,normal:true})}
       />
         </>
     }
