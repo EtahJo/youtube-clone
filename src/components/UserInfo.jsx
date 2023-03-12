@@ -202,11 +202,11 @@ console.log(userModal[3].more[0].account)
                 {dark ? <AiOutlineCheck className='tickIcon'
                 
                 />:<div className='tickIcon'></div>}
-                <p>Dark theme</p>
+                <p onClick={()=>setDark(true)}>Dark theme</p>
             </li>
             <li>
             {!dark ? <AiOutlineCheck className='tickIcon'/>:<div className='tickIcon'></div>}
-                <p>
+                <p onClick={()=>setDark(false)}>
                 Light theme
                 </p>
             </li>
