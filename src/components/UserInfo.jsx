@@ -225,6 +225,18 @@ console.log(userModal[3].more[0].account)
         </ul>
         </>
     }
+    {
+        more.language && <>
+        </>
+    }
+    {
+        more.mode && <>
+        </>
+    }
+    {
+        more.location && <>
+        </>
+    }
     </div>
   )
 }
