@@ -226,15 +226,33 @@ console.log(userModal[3].more[0].account)
         </>
     }
     {
-        more.language && <>
+        more.language &&
+         <>
+          <div className='accountHeader'>
+            <IoIosArrowRoundBack size={30} 
+            onClick={()=>setMore({...more,language:false,normal:true})}/>
+            <p>Choose your language</p>
+        </div>
         </>
     }
     {
-        more.mode && <>
+        more.mode &&
+         <>
+          <div className='accountHeader'>
+            <IoIosArrowRoundBack size={30} 
+            onClick={()=>setMore({...more,mode:false,normal:true})}/>
+            <p>Restricted Mode</p>
+        </div>
         </>
     }
     {
-        more.location && <>
+        more.location &&
+         <>
+          <div className='accountHeader'>
+            <IoIosArrowRoundBack size={30} 
+            onClick={()=>setMore({...more,location:false,normal:true})}/>
+            <p>Choose your Location</p>
+        </div>
         </>
     }
     </div>
