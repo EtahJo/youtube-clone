@@ -9,7 +9,11 @@ const languages =[
     "Chinese",
     "Spanish",
     "Filipino",
-    "Afrikaans"
+    "Afrikaans",
+    "Russian",
+    "Farci",
+    "Magyar",
+    "Norsk"
 ]
 
 export default languages

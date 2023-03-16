@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import ContextProvider from './context/catContext';
 import SideBarProvider from './context/sidebarContext';
 import ThemeProvider from './context/appearanceContext';
+import LanguageProvider from './context/languageContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,7 +13,9 @@ root.render(
     <SideBarProvider>
     <ContextProvider>
       <ThemeProvider>
-      <App />
+        <LanguageProvider>
+        <App />
+        </LanguageProvider>
       </ThemeProvider>
     </ContextProvider>
     </SideBarProvider>
