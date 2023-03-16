@@ -6,6 +6,7 @@ import {BiLogOut} from 'react-icons/bi';
 import {BsPersonPlus} from 'react-icons/bs';
 import { ThemeContext } from '../context/appearanceContext';
 import UserSectionHeader from './UserSectionHeader';
+import languages from '../data/languages';
 
 const UserInfo = () => {
 const[more,setMore]=useState({
@@ -236,6 +237,13 @@ console.log(userModal[3].more[0].account)
       title='Choose your language'
       onClick={()=>setMore({...more,language:false,normal:true})}
       />
+      <div>
+        {languages.map((item,index)=>(
+            <ul key={index}>
+                <li>{item}</li>
+            </ul>
+        ))}
+      </div>
         </>
     }
     {

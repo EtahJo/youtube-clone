@@ -1,5 +1,7 @@
 const languages =[
-    "English",
+    "English (UK)",
+    "English (US)",
+    "English (Indian)",
     "French",
     "German",
     "Italian",
