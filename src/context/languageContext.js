@@ -1,13 +1,14 @@
 import React, { useState, createContext } from 'react';
 
-export const languageContext = createContext(null);
+export const language$CountryContext = createContext(null);
 
 const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useState('English');
+  const [country, setCountry] = useState('Cameroon');
   return (
-    <languageContext.Provider value={{ language, setLanguage }}>
+    <language$CountryContext.Provider value={{ language, setLanguage, country, setCountry }}>
       {children}
-    </languageContext.Provider>
+    </language$CountryContext.Provider>
   );
 };
 

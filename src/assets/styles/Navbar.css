@@ -419,7 +419,7 @@ input:checked + .slider:before {
   -webkit-transform: translateX(30px);
   -ms-transform: translateX(30px);
   transform: translateX(30px);
-  background-color: rgb(44, 44, 243);
+  background-color: rgb(73, 123, 250);
 }
 
 /* Rounded sliders */
@@ -429,4 +429,19 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.restrictedMode {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 15px;
+}
+.restrictedMode p {
+  font-size: 14px;
+  margin: 10px 0;
+}
+.restrictedMode h4 {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
 }

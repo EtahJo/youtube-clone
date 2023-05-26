@@ -5,9 +5,10 @@ import { AiOutlineCheck } from 'react-icons/ai';
 import { BiLogOut } from 'react-icons/bi';
 import { BsPersonPlus } from 'react-icons/bs';
 import { ThemeContext } from '../context/appearanceContext';
-import { languageContext } from '../context/languageContext';
+import { language$CountryContext } from '../context/languageContext';
+import { restrictedContext } from '../context/restrictedContext';
 import UserSectionHeader from './UserSectionHeader';
-import languages from '../data/languages';
+import languages, { countries } from '../data/languages';
 
 const UserInfo = () => {
   const [more, setMore] = useState({
@@ -19,11 +20,8 @@ const UserInfo = () => {
     normal: true,
   });
   const { dark, setDark } = useContext(ThemeContext);
-  const { language, setLanguage } = useContext(languageContext);
-  // useEffect(()=>{
-  //     setDark(!dark)
-  // },[dark])
-  console.log(userModal[3].more[0].account);
+  const { language, setLanguage, country, setCountry } = useContext(language$CountryContext);
+  const { mode, setMode } = useContext(restrictedContext);
   return (
     <div className='userInfo'>
       {more.normal && (
@@ -107,38 +105,44 @@ const UserInfo = () => {
                     )}
 
                     {item.mode && (
-                      <IoIosArrowForward
-                        size={25}
-                        className='itemIcon'
-                        onClick={() =>
-                          setMore({
-                            ...more,
-                            account: false,
-                            normal: false,
-                            appearance: false,
-                            language: false,
-                            mode: true,
-                            location: false,
-                          })
-                        }
-                      />
+                      <>
+                        {mode ? 'On' : 'Off'}
+                        <IoIosArrowForward
+                          size={25}
+                          className='itemIcon'
+                          onClick={() =>
+                            setMore({
+                              ...more,
+                              account: false,
+                              normal: false,
+                              appearance: false,
+                              language: false,
+                              mode: true,
+                              location: false,
+                            })
+                          }
+                        />
+                      </>
                     )}
                     {item.location && (
-                      <IoIosArrowForward
-                        size={25}
-                        className='itemIcon'
-                        onClick={() =>
-                          setMore({
-                            ...more,
-                            account: false,
-                            normal: false,
-                            appearance: false,
-                            language: false,
-                            mode: false,
-                            location: true,
-                          })
-                        }
-                      />
+                      <>
+                        <p style={{ marginLeft: '-2px' }}>{country}</p>
+                        <IoIosArrowForward
+                          size={25}
+                          className='itemIcon'
+                          onClick={() =>
+                            setMore({
+                              ...more,
+                              account: false,
+                              normal: false,
+                              appearance: false,
+                              language: false,
+                              mode: false,
+                              location: true,
+                            })
+                          }
+                        />
+                      </>
                     )}
                   </span>
                 )}
@@ -246,7 +250,8 @@ const UserInfo = () => {
             {languages.map((item, index) => (
               <ul key={index}>
                 <li onClick={() => setLanguage(`${item}`)} style={{ cursor: 'pointer' }}>
-                  {item}
+                  {item === language ? <AiOutlineCheck style={{ marginLeft: '-16px' }} /> : ''}
+                  <p> {item}</p>
                 </li>
               </ul>
             ))}
@@ -260,16 +265,27 @@ const UserInfo = () => {
             title='Restricted Mode'
             onClick={() => setMore({ ...more, mode: false, normal: true })}
           />
-          <div>
+          <div className='restrictedMode'>
             <p>This helps hide potentially mature videos. No filter is 100% accurate.</p>
             <p>This setting only applies to this browser.</p>
-            <div>
+            <div style={{ display: 'flex', justifyContent: 'space-around' }}>
               <h4>ACTIVATE RESTRICTED MODE</h4>
               <label class='switch'>
-                <input type='checkbox' />
+                <input type='checkbox' onChange={() => setMode(!mode)} />
                 <span class='slider round'></span>
               </label>
             </div>
+            {mode ? (
+              <div>
+                <p>
+                  Restricted Mode lock prevents others from changing the Restricted Mode settings on
+                  this browser.
+                </p>
+                <p>Lock Restricted Mode on this browser</p>
+              </div>
+            ) : (
+              ''
+            )}
           </div>
         </>
       )}
@@ -280,6 +296,21 @@ const UserInfo = () => {
             title='Choose your location'
             onClick={() => setMore({ ...more, location: false, normal: true })}
           />
+          <div>
+            {countries.map((item, index) => (
+              <ul key={index}>
+                <li
+                  onClick={() => {
+                    setCountry(`${item}`);
+                  }}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {item === country ? <AiOutlineCheck style={{ marginLeft: '-16px' }} /> : ''}
+                  <p> {item}</p>
+                </li>
+              </ul>
+            ))}
+          </div>
         </>
       )}
     </div>

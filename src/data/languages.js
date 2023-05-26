@@ -17,3 +17,22 @@ const languages = [
 ];
 
 export default languages;
+
+export const countries = [
+  'Algeria',
+  'Argentina',
+  'Australia',
+  'Bahrain',
+  'Belgium',
+  'Bolivia',
+  'Cambodia',
+  'Cameroon',
+  'Canada',
+  'Chile',
+  'Colombia',
+  'Croatia',
+  'Denmark',
+  'Dominican Republic',
+  'Ecuador',
+  'Egypt',
+];
