@@ -4,13 +4,15 @@ import '../assets/styles/Body.css';
 import hoverVideo from '../assets/videos/talking.mp4';
 import VideoData from '../data/videoData';
 import { CatContext } from '../context/catContext';
+import { dataContext } from '../context/displayDataContext';
 
 const Body = () => {
   const { catName } = useContext(CatContext);
+  const {data}=useContext(dataContext)
   const displayData = VideoData.find((item) => item.category.includes(catName));
   return (
     <div className='bodyContainer'>
-      {VideoData.map((item) => (
+      {data.map((item) => (
         <SnippetComponent
           title={item.title}
           thumbnail={item.thumbnail}

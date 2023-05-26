@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext} from 'react';
 import userModal from '../data/userModal';
 import { IoIosArrowForward, IoIosArrowRoundBack } from 'react-icons/io';
 import { AiOutlineCheck } from 'react-icons/ai';

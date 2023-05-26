@@ -7,6 +7,7 @@ import SideBarProvider from './context/sidebarContext';
 import ThemeProvider from './context/appearanceContext';
 import LanguageProvider from './context/languageContext';
 import RestrictedProvider from './context/restrictedContext';
+import DataContextProvider from './context/displayDataContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,7 +17,10 @@ root.render(
         <ThemeProvider>
           <LanguageProvider>
             <RestrictedProvider>
+              <DataContextProvider>
               <App />
+              </DataContextProvider>
+             
             </RestrictedProvider>
           </LanguageProvider>
         </ThemeProvider>
