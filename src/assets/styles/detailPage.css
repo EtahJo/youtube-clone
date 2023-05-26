@@ -1,295 +1,287 @@
-.sideDetail{
-   
-    width: 100%;
-    z-index: 5000;
-    position: fixed;
-    display: flex;
-    flex-direction: row;
+.sideDetail {
+  width: 100%;
+  z-index: 5000;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
 }
-.sideClose{
-    background-color: red;
-
+.sideClose {
+  background-color: red;
 }
-.detailContainer{
-   position: relative;
-    display: flex;
+.detailContainer {
+  position: relative;
+  display: flex;
 }
-.detailBody{
-    margin-top: 60px;
-    display: flex;
-    width: 100%;
-background: transparent;
+.detailBody {
+  margin-top: 60px;
+  display: flex;
+  width: 100%;
+  background: transparent;
 }
 
-.detailLeftTop{
-display: flex;
-flex-direction: column;
+.detailLeftTop {
+  display: flex;
+  flex-direction: column;
 }
-.detailLeftTopBody{
-    padding: 30px;
+.detailLeftTopBody {
+  padding: 30px;
 }
-.detailVideos{
-    margin-top: 10px;
+.detailVideos {
+  margin-top: 10px;
 }
-.detailTagBar img{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right:  5px;
+.detailTagBar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 5px;
 }
-.detailTagBar{
-    display: flex;
-    justify-content: space-between;
+.detailTagBar {
+  display: flex;
+  justify-content: space-between;
 }
-.detailBody button{
-    display: flex;
-    align-items: center;
-    
+.detailBody button {
+  display: flex;
+  align-items: center;
 }
-.nameSection{
-    margin: 0 5px;
+.nameSection {
+  margin: 0 5px;
 }
-.subscribe{
-    border: none;
-    padding: 10px 20px ;
-    color: black;
-    border-radius: 30px;
-    font-weight: 800;
-    background-color: aliceblue;
+.subscribe {
+  border: none;
+  padding: 10px 20px;
+  color: black;
+  border-radius: 30px;
+  font-weight: 800;
+  background-color: aliceblue;
 }
-.likeContainer{
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    background-color:rgba(255, 255, 255, 0.149) ;
-    margin: 0 5px;
-    border-radius: 30px;
-    padding: 5px 10px;
-    justify-content: space-around;
-
+.likeContainer {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.149);
+  margin: 0 5px;
+  border-radius: 30px;
+  padding: 5px 10px;
+  justify-content: space-around;
 }
-.likeContainer button{
-    background-color: transparent;
-    border: none;
-    margin: 0 5px;
+.likeContainer button {
+  background-color: transparent;
+  border: none;
+  margin: 0 5px;
 }
-.likeContainer p{
-    padding: 0 10px;
-    border-right: 1px solid rgba(255, 255, 255, 0.549);
+.likeContainer p {
+  padding: 0 10px;
+  border-right: 1px solid rgba(255, 255, 255, 0.549);
 }
-.tagRightSide{
-    display: flex;
+.tagRightSide {
+  display: flex;
 }
-.tagLeftSide{
-    display: flex;
+.tagLeftSide {
+  display: flex;
 }
-.tagLeftSide span{
-display: flex;
-align-items: center;
+.tagLeftSide span {
+  display: flex;
+  align-items: center;
 }
-.tagLeftSide  p{
-    font-size: 14px;
+.tagLeftSide p {
+  font-size: 14px;
 }
-.tagLeftSide p:nth-child(1){
-    font-weight: 800;
-    margin-right: 3px;
+.tagLeftSide p:nth-child(1) {
+  font-weight: 800;
+  margin-right: 3px;
 }
-.tagLeftSide p:nth-child(2){
-    color: rgba(255, 255, 255, 0.549);
+.tagLeftSide p:nth-child(2) {
+  color: rgba(255, 255, 255, 0.549);
 }
-.share{
-    background-color:rgba(255, 255, 255, 0.149) ;
-    border: none;
-    border-radius: 30px; 
-    padding: 5px 10px;
-    margin: 0 5px;
+.share {
+  background-color: rgba(255, 255, 255, 0.149);
+  border: none;
+  border-radius: 30px;
+  padding: 5px 10px;
+  margin: 0 5px;
 }
-.detailLeftTopBody h3{
-    margin: 15px 0;
+.detailLeftTopBody h3 {
+  margin: 15px 0;
 }
 
-.detailDescription{
-    background-color: rgba(255, 255, 255, 0.149);
-    margin: 20px 0;
-    border-radius: 10px;
-    padding: 10px;
+.detailDescription {
+  background-color: rgba(255, 255, 255, 0.149);
+  margin: 20px 0;
+  border-radius: 10px;
+  padding: 10px;
 }
-.detailDescription span{
-    display: flex;
-    align-items: center;
+.detailDescription span {
+  display: flex;
+  align-items: center;
 }
-.detailDescription span p{
-    margin-right: 5px;
-    font-weight: 500;
-    font-size: 16px;
+.detailDescription span p {
+  margin-right: 5px;
+  font-weight: 500;
+  font-size: 16px;
 }
-.detailDescription h5{
-    font-weight: normal;
-    margin-top: 5px;
+.detailDescription h5 {
+  font-weight: normal;
+  margin-top: 5px;
 }
-.tags{
-    display: grid;
-    grid-template-columns: repeat(20,1fr);
-    margin-left: 30px;
-
+.tags {
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  margin-left: 30px;
 }
-.detailLeftBottom{
-    display: flex;
-flex-direction: column;
-padding-left: 30px;
-
+.detailLeftBottom {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
 }
-.tags >p{
-    color: rgba(255, 255, 255, 0.749);
+.tags > p {
+  color: rgba(255, 255, 255, 0.749);
 }
-.tagsContent{
-    display: grid;
-    grid-column: span 16;
-    grid-template-columns: repeat(12,1fr);
-    gap: 1px;
+.tagsContent {
+  display: grid;
+  grid-column: span 16;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1px;
 }
-.tagsContent p{
-    color:#3ea6ff;
+.tagsContent p {
+  color: #3ea6ff;
 }
-.detailSnippet{
-    display: flex;
-    margin: 5px 0;
-    cursor: pointer;
+.detailSnippet {
+  display: flex;
+  margin: 5px 0;
+  cursor: pointer;
 }
-.detailSnippet img{
-    width: 180px;
-    border-radius: 10px;
-    object-fit: cover;
+.detailSnippet img {
+  width: 180px;
+  border-radius: 10px;
+  object-fit: cover;
 }
-.detailSnippet span{
-    display: flex;
-    align-items: center;
+.detailSnippet span {
+  display: flex;
+  align-items: center;
 }
-.detailSnippetContent  p{
-    color: rgba(255, 255, 255, 0.549);
-    font-size: 12px;
+.detailSnippetContent p {
+  color: rgba(255, 255, 255, 0.549);
+  font-size: 12px;
 }
-.detailSnippet h3{
-    font-size: 14px;
-    margin-bottom: 10px;
+.detailSnippet h3 {
+  font-size: 14px;
+  margin-bottom: 10px;
 }
-.detailSnippetContent{
-    margin-left: 10px;
+.detailSnippetContent {
+  margin-left: 10px;
 }
-.detailSnippetLeft{
-    position: relative;
+.detailSnippetLeft {
+  position: relative;
 }
 .detailSnippetLeft span {
-    position: absolute;
-    z-index: 300;
-   
-    flex-direction: column;
-    right: 0px;
-    top: 0px;
-    display: none;
+  position: absolute;
+  z-index: 300;
+
+  flex-direction: column;
+  right: 0px;
+  top: 0px;
+  display: none;
 }
-.spanIcon{
-    background-color: rgba(0, 0, 0, 0.549);
-    margin: 5px;
-    padding: 5px;
-    align-self: center;
-    border-radius: 5px;
-   
+.spanIcon {
+  background-color: rgba(0, 0, 0, 0.549);
+  margin: 5px;
+  padding: 5px;
+  align-self: center;
+  border-radius: 5px;
 }
-.detailSnippet:hover .detailSnippetLeft span{
-    display: flex;
+.detailSnippet:hover .detailSnippetLeft span {
+  display: flex;
 }
-.commentLength{
-    display: flex;
-    align-items: center;
-    margin: 20px 0;
+.commentLength {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
 }
-.commentLength p:nth-child(1){
-    margin-right: 45px;
+.commentLength p:nth-child(1) {
+  margin-right: 45px;
 }
-.commentLengthP{
-    padding-left: 20px;
-   
+.commentLengthP {
+  padding-left: 20px;
 }
-.commentContainer{
-    display: flex;
-    align-items: flex-start;
-    margin: 10px 0;
+.commentContainer {
+  display: flex;
+  align-items: flex-start;
+  margin: 10px 0;
 }
-.commentContainer img{
-    object-fit: cover;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    margin-top: 10px;
+.commentContainer img {
+  object-fit: cover;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-top: 10px;
 }
-.commentContainerContent{
-    display: flex;
-    flex-direction: column;
-    margin: 0 20px;
+.commentContainerContent {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
 }
-.commentContainerContent span{
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
+.commentContainerContent span {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
 }
-.commentContainerContent span button{
-    background-color: transparent;
-    border: none;
-    margin: 0 5px;
-    cursor: pointer;
+.commentContainerContent span button {
+  background-color: transparent;
+  border: none;
+  margin: 0 5px;
+  cursor: pointer;
 }
-.commentContainerContent span:nth-child(1) p:nth-child(2){
- color: rgba(255, 255, 255, 0.549);
- font-size: 12px;
- margin: 0 5px;
- align-self: center;
- font-weight: 500;
+.commentContainerContent span:nth-child(1) p:nth-child(2) {
+  color: rgba(255, 255, 255, 0.549);
+  font-size: 12px;
+  margin: 0 5px;
+  align-self: center;
+  font-weight: 500;
 }
-.commentContainerContent span:nth-child(1) p:nth-child(1){
-    font-weight: 500;
-    font-size: 16px;
+.commentContainerContent span:nth-child(1) p:nth-child(1) {
+  font-weight: 500;
+  font-size: 16px;
 }
-.likes{
-    color: rgba(255, 255, 255, 0.549);
-    font-size: 14px;
-    margin-bottom: 10px;
+.likes {
+  color: rgba(255, 255, 255, 0.549);
+  font-size: 14px;
+  margin-bottom: 10px;
 }
-.theComment{
-    color: 14px;
+.theComment {
+  color: 14px;
 }
-.replies,.arrowReplies{
-    color: #3ea6ff;
+.replies,
+.arrowReplies {
+  color: #3ea6ff;
 }
-.allTheReplies{
-    cursor: pointer;
+.allTheReplies {
+  cursor: pointer;
 }
-.addComment img{
-    object-fit: cover;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    margin-top: 10px;
+.addComment img {
+  object-fit: cover;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-top: 10px;
 }
-.addComment input{
-    background-color: transparent;
-    border: none;
-    margin: 0 20px;
-    width: 100%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.149);
-    padding-bottom: 5px;
-    color: rgba(255, 255, 255, 0.949);
+.addComment input {
+  background-color: transparent;
+  border: none;
+  margin: 0 20px;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.149);
+  padding-bottom: 5px;
+  color: rgba(255, 255, 255, 0.949);
 }
-.addComment input::placeholder{
-    color: rgba(255, 255, 255, 0.649);
-    font-size: 16px;
-    opacity: 1;
+.addComment input::placeholder {
+  color: rgba(255, 255, 255, 0.649);
+  font-size: 16px;
+  opacity: 1;
 }
-.addComment{
-    display: flex;
-    align-items: center;
-    
+.addComment {
+  display: flex;
+  align-items: center;
 }
-.detailRight{
-    width: 400px;
+.detailRight {
+  width: 400px;
 }

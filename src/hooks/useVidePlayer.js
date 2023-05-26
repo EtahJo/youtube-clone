@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 const useVideoPlayer = (videoElement) => {
   const [playerState, setPlayerState] = useState({
@@ -16,9 +16,7 @@ const useVideoPlayer = (videoElement) => {
   };
 
   useEffect(() => {
-    playerState.isPlaying
-      ? videoElement.current.play()
-      : videoElement.current.pause();
+    playerState.isPlaying ? videoElement.current.play() : videoElement.current.pause();
   }, [playerState.isPlaying, videoElement]);
 
   const handleOnTimeUpdate = () => {
