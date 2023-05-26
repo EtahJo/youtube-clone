@@ -5,6 +5,7 @@ import {AiOutlineCheck} from 'react-icons/ai';
 import {BiLogOut} from 'react-icons/bi';
 import {BsPersonPlus} from 'react-icons/bs';
 import { ThemeContext } from '../context/appearanceContext';
+import { languageContext } from '../context/languageContext';
 import UserSectionHeader from './UserSectionHeader';
 import languages from '../data/languages';
 
@@ -18,6 +19,7 @@ const[more,setMore]=useState({
     normal:true
 })
 const {dark,setDark}= useContext(ThemeContext)
+const {language,setLanguage}=useContext(languageContext);
 // useEffect(()=>{
 //     setDark(!dark)
 // },[dark])
@@ -80,7 +82,10 @@ console.log(userModal[3].more[0].account)
                                         
                                         }
                               
-                                {item.language && <IoIosArrowForward size={25} 
+                                {item.language && 
+                                <>
+                                <p style={{marginLeft:'-2px'}}>{language}</p>
+                                  <IoIosArrowForward size={25} 
                                 className='itemIcon'
                                 onClick={
                                     ()=>setMore({
@@ -91,7 +96,9 @@ console.log(userModal[3].more[0].account)
                                         language:true,
                                         mode:false,
                                         location:false,
-                                        })}/> }
+                                        })}/>
+                                </>
+                               }
 
                                 {item.mode && <IoIosArrowForward size={25} 
                                 className='itemIcon'
@@ -240,7 +247,7 @@ console.log(userModal[3].more[0].account)
       <div>
         {languages.map((item,index)=>(
             <ul key={index}>
-                <li >{item}</li>
+                <li onClick={()=>setLanguage(`${item}`)} style={{cursor:'pointer'}}>{item}</li>
             </ul>
         ))}
       </div>
