@@ -196,6 +196,7 @@ width: 400px;
     display: flex;
     margin: 5px 0;
     align-items: flex-start;
+    cursor: pointer;
 }
 .snippetBottomContent{
     display: flex;

@@ -240,7 +240,7 @@ console.log(userModal[3].more[0].account)
       <div>
         {languages.map((item,index)=>(
             <ul key={index}>
-                <li>{item}</li>
+                <li >{item}</li>
             </ul>
         ))}
       </div>
