@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import DetailedPage from './pages/DetailedPage';
 import HomePage from './pages/HomePage';
-import Sidebar from './components/Sidebar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {

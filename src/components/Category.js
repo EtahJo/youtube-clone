@@ -1,10 +1,10 @@
-import React,{useContext} from 'react';
+import React from 'react';
 import '../assets/styles/Body.css';
-import { dataContext } from '../context/displayDataContext';
+// import { dataContext } from '../context/displayDataContext';
 import VideoData from '../data/videoData';
 
 const Category = ({ name, active, onClick }) => {
-  const{setData}=useContext(dataContext);
+  // const{setData}=useContext(dataContext);
   const filterData=(name)=>{
    const data= VideoData.find((item)=>item.category.includes(name));
   console.log(data)

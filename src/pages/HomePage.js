@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../assets/styles/HomePage.css';
 import Categories from '../components/Categories';
 import Body from '../components/Body';

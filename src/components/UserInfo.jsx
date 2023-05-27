@@ -1,6 +1,6 @@
 import React, { useState, useContext} from 'react';
 import userModal from '../data/userModal';
-import { IoIosArrowForward, IoIosArrowRoundBack } from 'react-icons/io';
+import { IoIosArrowForward } from 'react-icons/io';
 import { AiOutlineCheck } from 'react-icons/ai';
 import { BiLogOut } from 'react-icons/bi';
 import { BsPersonPlus } from 'react-icons/bs';
