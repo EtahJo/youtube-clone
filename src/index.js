@@ -18,9 +18,8 @@ root.render(
           <LanguageProvider>
             <RestrictedProvider>
               <DataContextProvider>
-              <App />
+                <App />
               </DataContextProvider>
-             
             </RestrictedProvider>
           </LanguageProvider>
         </ThemeProvider>
