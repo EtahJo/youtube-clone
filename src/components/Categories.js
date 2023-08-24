@@ -5,29 +5,32 @@ import { CatContext } from '../context/catContext';
 import { dataContext } from '../context/displayDataContext';
 const Categories = ({ home }) => {
   const [cat, setCat] = useState('');
-  const { catName, setCatName } = useContext(CatContext);
-  const { data, setData } = useContext(dataContext);
+  const { setCatName } = useContext(CatContext);
+  const { data} = useContext(dataContext);
   let categories = [];
-
+  // let dataArray = [];
   VideoData.forEach(function (item) {
     categories.push(...item.category);
+    // if (item.category.includes(catName)) {
+    //   dataArray.push(item);
+    // }
+  
   });
   const allCats = new Set(categories);
   const CatsArray = [...allCats];
   const handleClick = (name) => {
     setCat(name);
     setCatName(name);
+    // if(dataArray.length !== 0){
+    //   setData(dataArray);
+    // }
+    
   };
-  let dataArray = [];
-  const filterData = (name) => {
-    for (let i = 0; i < VideoData.length; i++) {
-      if (VideoData[i].category.includes(catName)) {
-        dataArray.push(VideoData[i]);
-      }
-    }
-    setData(dataArray);
+ 
+
+   
     console.log('data info', data);
-  };
+
 
   return (
     <div className={home ? 'categoriesContainer' : 'sideCategories'}>
@@ -38,7 +41,7 @@ const Categories = ({ home }) => {
           key={index}
           onClick={() => {
             handleClick(item);
-            filterData(item);
+
           }}
           active={cat}
         />

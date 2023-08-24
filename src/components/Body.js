@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext,useEffect } from 'react';
 import SnippetComponent from './SnippetComponent';
 import '../assets/styles/Body.css';
 import hoverVideo from '../assets/videos/talking.mp4';
@@ -8,7 +8,10 @@ import { dataContext } from '../context/displayDataContext';
 
 const Body = () => {
   const { catName } = useContext(CatContext);
-  const { data } = useContext(dataContext);
+  const { data ,setData} = useContext(dataContext);
+  useEffect(()=>{
+    setData(data);
+  },[data])
   if (data.length === 0) {
     return (
       <div className='bodyContainer'>
@@ -19,21 +22,8 @@ const Body = () => {
 
   return (
     <div className='bodyContainer'>
-      {catName === 'All'
-        ? VideoData.map((item) => (
-            <SnippetComponent
-              title={item.title}
-              thumbnail={item.thumbnail}
-              owner={item.owner}
-              views={item.views}
-              duration={item.duration}
-              video={hoverVideo}
-              verified={item.verified}
-              key={item.id}
-              id={item.id}
-            />
-          ))
-        : data.map((item) => (
+ {   
+         data.map((item) => (
             <SnippetComponent
               title={item.title}
               thumbnail={item.thumbnail}
